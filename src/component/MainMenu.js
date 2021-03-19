@@ -58,9 +58,27 @@ const MainMenu = ({ pageChange }) => {
           >
             인사정보 일괄
           </li>
-          <li onClick="">연말정산 준비 작업</li>
-          <li onClick="">연말정산 처리 작업</li>
-          <li onClick="">연말정산 공지 메일</li>
+          <li
+            onClick={(e) => {
+              pageChange(2);
+            }}
+          >
+            연말정산 준비 작업
+          </li>
+          <li
+            onClick={(e) => {
+              pageChange(3);
+            }}
+          >
+            연말정산 처리 작업
+          </li>
+          <li
+            onClick={(e) => {
+              pageChange(4);
+            }}
+          >
+            연말정산 공지 메일
+          </li>
         </ul>
       </div>
       {/* {console.log(menuNum)} */}

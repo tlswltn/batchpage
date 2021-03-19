@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Search from "./Search";
 import ScheduleSetting from "../component/ScheduleSetting";
 import InsaPer from "./InsaPer";
+import Ready from "./Ready";
 import { useState } from "react";
 
 const BatchPage = () => {
@@ -49,10 +50,12 @@ const BatchPage = () => {
 
           {menuNum === 1 ? (
             <InsaPer />
-          ) : (
+          ) : menuNum === 2 ? (
             // alert("hi", menuNum)
-            <ScheduleSetting />
+            <Ready />
+          ) : (
             // <InsaPer />
+            <ScheduleSetting />
           )}
         </div>
       </div>
