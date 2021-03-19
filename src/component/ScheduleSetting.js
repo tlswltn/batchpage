@@ -50,7 +50,7 @@ const SheduleSetting = () => {
       height: 30,
       backgroundColor: "#FFFFFF",
       border: "1px solid #007DFF",
-      BorderRadius: 5,
+      borderRadius: 5,
       color: "#007DFF",
     },
     table: {
@@ -88,12 +88,12 @@ const SheduleSetting = () => {
     setValue(event.target.value);
   };
   const columns = [
-    { field: "id", headerName: "ID", width: 70 },
-    { field: "firstName", headerName: "First name", width: 130 },
-    { field: "lastName", headerName: "Last name", width: 130 },
+    { field: "id", headerName: "회사명", width: 100 },
+    { field: "firstName", headerName: "처리결과", width: 100 },
+    { field: "lastName", headerName: "실행날짜", width: 100 },
     {
       field: "age",
-      headerName: "Age",
+      headerName: "처리자",
       type: "number",
       width: 90,
     },
@@ -192,6 +192,7 @@ const SheduleSetting = () => {
                     id="filled-basic"
                     label="Filled"
                     variant="filled"
+                    style={{ width: 400 }}
                   />
                 </div>
               </div>
@@ -276,6 +277,7 @@ const SheduleSetting = () => {
                     display: "table-cell",
                     border: "1px solid black",
                     height: 200,
+                    backgroundColor: "#F5F5F5",
                   }}
                 >
                   급여대행거래처
@@ -288,6 +290,7 @@ const SheduleSetting = () => {
                     display: "table-cell",
                     border: "1px solid black",
                     height: 200,
+                    backgroundColor: "#F5F5F5",
                   }}
                 >
                   급여대행거래처

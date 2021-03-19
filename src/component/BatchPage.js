@@ -27,17 +27,30 @@ const BatchPage = () => {
     right: {},
   });
   const classes = useStyles();
-  const [check, setCheck] = useState();
+  const [menuNum, setMenuNum] = useState();
+
+  const pageChange = (id) => {
+    console.log("id", id);
+    setMenuNum(id);
+    console.log("menuNum", menuNum);
+    // setOpen(true);
+  };
   return (
     <>
       <Header />
       <div className={classes.bg}>
         <div style={{ paddingTop: 100 }}>
-          <MainMenu setCheck={setCheck} />
+          <MainMenu
+            /*setMenuNum={setMenuNum} */ pageChange={pageChange}
+            // menuNum={111111}
+          />
+          {/* <MainMenu /> */}
           <Search />
-          {check === 1 ? (
-            alert(check)()
+
+          {menuNum === 1 ? (
+            <InsaPer />
           ) : (
+            // alert("hi", menuNum)
             <ScheduleSetting />
             // <InsaPer />
           )}

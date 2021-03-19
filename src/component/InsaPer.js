@@ -5,8 +5,18 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
-// import FormLabel from "@material-ui/core/FormLabel";
-const InsaPer = () => {
+import MenuItem from "@material-ui/core/MenuItem";
+import InputLabel from "@material-ui/core/InputLabel";
+import Select from "@material-ui/core/Select";
+import TextField from "@material-ui/core/TextField";
+import DateFnsUtils from "@date-io/date-fns";
+import {
+  MuiPickersUtilsProvider,
+  KeyboardTimePicker,
+  KeyboardDatePicker,
+} from "@material-ui/pickers";
+import FormLabel from "@material-ui/core/FormLabel";
+const SheduleSetting = () => {
   const useStyles = makeStyles({
     root: {
       width: 1550,
@@ -24,8 +34,16 @@ const InsaPer = () => {
       display: "flex",
       justifyContent: "space-between",
       width: 1550,
-      height: 625,
+      //   borderRadius: 20,
+      //   backgroundColor: "red",
+      height: 610,
       fontSize: 16,
+    },
+    rbox: {
+      width: 850,
+      borderRadius: 10,
+      //   overflowY: "scroll",
+      overflowX: "hidden",
     },
     btn2: {
       width: 68,
@@ -35,19 +53,32 @@ const InsaPer = () => {
       BorderRadius: 5,
       color: "#007DFF",
     },
+    table: {
+      width: 800,
+      maxHeight: 600,
+      overflowY: "scroll",
+      padding: 10,
+      backgroundColor: "#FFFFFF",
+      display: "table",
+      border: "1px solid black",
+      //   paddingRight: 50,
+    },
     tleft: {
       display: "table-cell",
       border: "1px solid black",
-      width: 200,
+      width: 180,
       height: 70,
+      paddingLeft: 20,
+      boxSizing: "border-box",
       verticalAlign: "middle",
     },
     tright: {
       display: "table-cell",
-      border: "1px solid black",
+      //   border: "1px solid black",
       verticalAlign: "middle",
-      width: 600,
+      width: 520,
       height: 70,
+      paddingLeft: 5,
     },
   });
   const classes = useStyles();
@@ -96,84 +127,174 @@ const InsaPer = () => {
       <div className={classes.root}>
         <div>
           <p>
-            <b>인사정보 일괄</b>{" "}
+            <b>인사정보 일괄!!!!!</b>{" "}
             <button className={classes.btn2}>일괄설정</button>
           </p>
         </div>
         <div className={classes.box}>
-          <div style={{ height: 625, width: 673, backgroundColor: "white" }}>
+          <div style={{ height: "100%", width: 673, backgroundColor: "white" }}>
             <DataGrid
               rows={rows}
               columns={columns}
-              pageSize={10}
+              pageSize={5}
               checkboxSelection
             />
           </div>
-          <div
-            style={{
-              width: 850,
-              height: 600,
-              padding: 10,
-              backgroundColor: "#FFFFFF",
-              display: "table",
-            }}
-          >
-            <div style={{ display: "table-row" }}>
-              <div className={classes.tleft}>거래처구분</div>
-              <div className={classes.tright}>
-                <FormControl component="fieldset">
-                  {/* <FormLabel component="legend">Gender</FormLabel> */}
-                  <RadioGroup
-                    aria-label="gender"
-                    name="gender1"
-                    value={value}
-                    onChange={handleChange}
-                    style={{ display: "inline" }}
+          <div className={classes.rbox}>
+            <div className={classes.table}>
+              <div style={{ display: "table-row" }}>
+                <div className={classes.tleft}>거래처구분</div>
+                <div
+                  className={classes.tright}
+                  style={{ backgroundColor: "#F5F5F5" }}
+                >
+                  <FormControl component="fieldset">
+                    {/* <FormLabel component="legend">Gender</FormLabel> */}
+                    <RadioGroup
+                      aria-label="gender"
+                      name="gender1"
+                      value={value}
+                      onChange={handleChange}
+                      style={{ display: "inline" }}
+                    >
+                      <FormControlLabel
+                        value="female"
+                        control={<Radio />}
+                        label="급여대행거래처"
+                      />
+                      <FormControlLabel
+                        value="male"
+                        control={<Radio />}
+                        label="연말정산거래처"
+                      />
+                    </RadioGroup>
+                  </FormControl>
+                </div>
+              </div>
+              <div style={{ display: "table-row" }}>
+                <div className={classes.tleft}>년도 및 일정명</div>
+                <div className={classes.tright}>
+                  <Select
+                    style={{ width: 150 }}
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                    //   value={age}
+                    //   onChange={handleChange}
                   >
-                    <FormControlLabel
-                      value="female"
-                      control={<Radio />}
-                      label="급여대행거래처"
+                    <MenuItem value="">
+                      <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                  </Select>
+                  <TextField
+                    id="filled-basic"
+                    label="Filled"
+                    variant="filled"
+                    style={{ width: 400 }}
+                  />
+                </div>
+              </div>
+              <div style={{ display: "table-row" }}>
+                <div className={classes.tleft}>안내자료 전달일</div>
+                <div className={classes.tright}>
+                  <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    {/* <Grid container justify="space-around"> */}
+                    <KeyboardDatePicker
+                      disableToolbar
+                      variant="inline"
+                      format="MM/dd/yyyy"
+                      margin="normal"
+                      id="date-picker-inline"
+                      label="Date picker inline"
+                      // value={selectedDate}
+                      // onChange={handleDateChange}
+                      KeyboardButtonProps={{
+                        "aria-label": "change date",
+                      }}
                     />
-                    <FormControlLabel
-                      value="male"
-                      control={<Radio />}
-                      label="연말정산거래처"
+                    <span>~</span>
+
+                    <KeyboardDatePicker
+                      disableToolbar
+                      variant="inline"
+                      format="MM/dd/yyyy"
+                      margin="normal"
+                      id="date-picker-inline"
+                      label="Date picker inline"
+                      // value={selectedDate}
+                      // onChange={handleDateChange}
+                      KeyboardButtonProps={{
+                        "aria-label": "change date",
+                      }}
                     />
-                  </RadioGroup>
-                </FormControl>
-              </div>
-            </div>
 
-            <div style={{ display: "table-row" }}>
-              <div className={classes.tleft}>년도 및 일정명</div>
-              <div style={{ display: "table-cell", border: "1px solid black" }}>
-                dddd
+                    {/* </Grid> */}
+                  </MuiPickersUtilsProvider>
+                </div>
               </div>
-            </div>
-            <div style={{ display: "table-row" }}>
-              <div className={classes.tleft}>안내자료 전달일</div>
-              <div style={{ display: "table-cell", border: "1px solid black" }}>
-                급여대행거래처
+              <div style={{ display: "table-row" }}>
+                <div className={classes.tleft}>작성상담 일정</div>
+                <div className={classes.tright}>
+                  <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    {/* <Grid container justify="space-around"> */}
+                    <KeyboardDatePicker
+                      disableToolbar
+                      variant="inline"
+                      format="MM/dd/yyyy"
+                      margin="normal"
+                      id="date-picker-inline"
+                      label="Date picker inline"
+                      // value={selectedDate}
+                      // onChange={handleDateChange}
+                      KeyboardButtonProps={{
+                        "aria-label": "change date",
+                      }}
+                    />{" "}
+                    <span>~</span>
+                    <KeyboardDatePicker
+                      disableToolbar
+                      variant="inline"
+                      format="MM/dd/yyyy"
+                      margin="normal"
+                      id="date-picker-inline"
+                      label="Date picker inline"
+                      // value={selectedDate}
+                      // onChange={handleDateChange}
+                      KeyboardButtonProps={{
+                        "aria-label": "change date",
+                      }}
+                    />
+                    {/* </Grid> */}
+                  </MuiPickersUtilsProvider>
+                </div>
               </div>
-            </div>
-
-            <div style={{ display: "table-row" }}>
-              <div className={classes.tleft}>작성상담 일정</div>
-              <div style={{ display: "table-cell", border: "1px solid black" }}>
-                급여대행거래처
+              <div style={{ display: "table-row" }}>
+                <div className={classes.tleft}>1차 일정</div>
+                <div
+                  style={{
+                    display: "table-cell",
+                    border: "1px solid black",
+                    height: 200,
+                    backgroundColor: "#F5F5F5",
+                  }}
+                >
+                  급여대행거래처
+                </div>
               </div>
-            </div>
-            <div style={{ display: "table-row" }}>
-              <div className={classes.tleft}>1차 일정</div>
-              <div style={{ display: "table-cell", border: "1px solid black" }}>
-                급여대행거래처
-              </div>
-            </div>
-            <div style={{ display: "table-row" }}>
-              <div className={classes.tleft}>2차 일정</div>
-              <div style={{ display: "table-cell", border: "1px solid black" }}>
-                급여대행거래처
+              <div style={{ display: "table-row" }}>
+                <div className={classes.tleft}>2차 일정</div>
+                <div
+                  style={{
+                    display: "table-cell",
+                    border: "1px solid black",
+                    height: 200,
+                    backgroundColor: "#F5F5F5",
+                  }}
+                >
+                  급여대행거래처
+                </div>
               </div>
             </div>
           </div>
@@ -182,4 +303,4 @@ const InsaPer = () => {
     </div>
   );
 };
-export default InsaPer;
+export default SheduleSetting;

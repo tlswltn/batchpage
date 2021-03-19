@@ -6,7 +6,8 @@ import { SvgIcon } from "@material-ui/core";
 import { useState } from "react";
 // import SvgIcon from '@material-ui/core/SvgIcon';
 // import EventAvailableIcon from '@material-ui/icons/EventAvailable';
-const MainMenu = () => {
+const MainMenu = ({ pageChange }) => {
+  // const MainMenu = (props) => {
   const useStyles = makeStyles({
     leftmenu: {
       position: "absolute",
@@ -32,8 +33,15 @@ const MainMenu = () => {
       },
     },
   });
+  /* const pageChange = (id) => {
+    console.log("id", id);
+    setMenuNum(id);
+    console.log("menuNum", menuNum);
+    // setOpen(true);
+  }; */
   const classes = useStyles();
-  const [menuNum, setMenuNum] = useState();
+  // console.log(menuNum);
+  //const [menuNum, setMenuNum] = useState("0");
   return (
     <>
       <div className={classes.leftmenu}>
@@ -44,19 +52,18 @@ const MainMenu = () => {
             연말정산 일정 설정
           </li>
           <li
-            onclick={(e) => {
-              setMenuNum(1);
-              console.log(menuNum);
-              // alert("d");
+            onClick={(e) => {
+              pageChange(1);
             }}
           >
             인사정보 일괄
           </li>
-          <li onclick="">연말정산 준비 작업</li>
-          <li onclick="">연말정산 처리 작업</li>
-          <li onclick="">연말정산 공지 메일</li>
+          <li onClick="">연말정산 준비 작업</li>
+          <li onClick="">연말정산 처리 작업</li>
+          <li onClick="">연말정산 공지 메일</li>
         </ul>
       </div>
+      {/* {console.log(menuNum)} */}
     </>
   );
 };
