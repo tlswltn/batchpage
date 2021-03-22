@@ -11,20 +11,11 @@ import Button from "@material-ui/core/Button";
 const TopMenu = () => {
   const useStyles = makeStyles({
     TopMenu: {
-      // position: "fixed",
-      // position: "absolute",
       width: 1550,
       height: 100,
-      // border: "1px solid black",
       backgroundColor: "#FFFFFF",
-      // paddingLeft: 300,
       borderRadius: 10,
-      // left: 340,
-      // marginTop: 100,
       marginLeft: 350,
-      // paadingLeft: 50,
-      // display: "inline-block",
-      borderRadius: 10,
       display: "flex",
       alignItems: "center",
       padding: 30,
@@ -51,7 +42,26 @@ const TopMenu = () => {
       <div className={classes.TopMenu}>
         <div className={classes.menuc}>
           <FormControl variant="outlined" className={classes.formControl}>
-            <InputLabel id="demo-simple-select-filled-label">Age</InputLabel>
+            <InputLabel id="demo-simple-select-filled-label">귀속년</InputLabel>
+            <Select
+              style={{ width: 150 }}
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+              value={age}
+              onChange={handleChange}
+            >
+              <MenuItem value="">
+                <em>2020</em>
+              </MenuItem>
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl variant="outlined" className={classes.formControl}>
+            <InputLabel id="demo-simple-select-filled-label">
+              내외부구분
+            </InputLabel>
             <Select
               style={{ width: 150 }}
               labelId="demo-simple-select-filled-label"
@@ -68,7 +78,9 @@ const TopMenu = () => {
             </Select>
           </FormControl>
           <FormControl variant="outlined" className={classes.formControl}>
-            <InputLabel id="demo-simple-select-filled-label">Age</InputLabel>
+            <InputLabel id="demo-simple-select-filled-label">
+              연말정산담당자
+            </InputLabel>
             <Select
               style={{ width: 150 }}
               labelId="demo-simple-select-filled-label"
@@ -85,7 +97,9 @@ const TopMenu = () => {
             </Select>
           </FormControl>
           <FormControl variant="outlined" className={classes.formControl}>
-            <InputLabel id="demo-simple-select-filled-label">Age</InputLabel>
+            <InputLabel id="demo-simple-select-filled-label">
+              처리상태
+            </InputLabel>
             <Select
               style={{ width: 150 }}
               labelId="demo-simple-select-filled-label"
@@ -101,25 +115,8 @@ const TopMenu = () => {
               <MenuItem value={30}>Thirty</MenuItem>
             </Select>
           </FormControl>
-          <FormControl variant="outlined" className={classes.formControl}>
-            <InputLabel id="demo-simple-select-filled-label">Age</InputLabel>
-            <Select
-              style={{ width: 150 }}
-              labelId="demo-simple-select-filled-label"
-              id="demo-simple-select-filled"
-              value={age}
-              onChange={handleChange}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
-            </Select>
-          </FormControl>
-          <TextField id="filled-basic" label="Filled" variant="filled" />
-          <TextField id="filled-basic" label="Filled" variant="filled" />
+          <TextField id="filled-basic" label="회사코드입력" variant="filled" />
+          <TextField id="filled-basic" label="처리자입력" variant="filled" />
           <Button
             variant="contained"
             color="primary"

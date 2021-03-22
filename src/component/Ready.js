@@ -127,8 +127,10 @@ const Ready = () => {
       <div className={classes.root}>
         <div>
           <p>
-            <b>연말정산 준비작업!!!!!</b>{" "}
-            <button className={classes.btn2}>일괄설정</button>
+            <b>연말정산 준비작업</b>{" "}
+            <button className={classes.btn2}>일괄 초기화</button>
+            <button className={classes.btn2}>일괄 마감</button>
+            <button className={classes.btn2}>일괄 마감 취소</button>
           </p>
         </div>
         <div className={classes.box}>
