@@ -11,23 +11,34 @@ import Button from "@material-ui/core/Button";
 const TopMenu = () => {
   const useStyles = makeStyles({
     TopMenu: {
-      width: 1550,
+      // float:"right",
+      // width: "70%",
+      // minWidth: 1000,
+      width: 1500,
+      // width: "100vw",
+      // width: "80%",
+      // float: "right",
+      // marginRight: 30,
       height: 100,
       backgroundColor: "#FFFFFF",
       borderRadius: 10,
       marginLeft: 350,
-      display: "flex",
-      alignItems: "center",
-      padding: 30,
+
       boxSizing: "border-box",
-      justifyContent: "start",
+      // display: "flex",
+      // alignItems: "center",
+      // padding: 30,
+
+      // justifyContent: "start",
     },
     menuc: {
-      width: 1215,
+      minWidth: 1100,
+      width: 1200,
       height: 100,
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
+      paddingLeft: 20,
     },
   });
   const classes = useStyles();
@@ -44,7 +55,7 @@ const TopMenu = () => {
           <FormControl variant="outlined" className={classes.formControl}>
             <InputLabel id="demo-simple-select-filled-label">귀속년</InputLabel>
             <Select
-              style={{ width: 150 }}
+              style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={age}
@@ -63,7 +74,7 @@ const TopMenu = () => {
               내외부구분
             </InputLabel>
             <Select
-              style={{ width: 150 }}
+              style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={age}
@@ -78,11 +89,14 @@ const TopMenu = () => {
             </Select>
           </FormControl>
           <FormControl variant="outlined" className={classes.formControl}>
-            <InputLabel id="demo-simple-select-filled-label">
+            <InputLabel
+              id="demo-simple-select-filled-label"
+              style={{ fontSize: 14 }}
+            >
               연말정산담당자
             </InputLabel>
             <Select
-              style={{ width: 150 }}
+              style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={age}
@@ -101,7 +115,7 @@ const TopMenu = () => {
               처리상태
             </InputLabel>
             <Select
-              style={{ width: 150 }}
+              style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={age}

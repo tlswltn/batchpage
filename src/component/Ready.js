@@ -46,12 +46,13 @@ const Ready = () => {
       overflowX: "hidden",
     },
     btn2: {
-      width: 68,
+      width: "auto",
       height: 30,
       backgroundColor: "#FFFFFF",
       border: "1px solid #007DFF",
-      BorderRadius: 5,
+      borderRadius: 5,
       color: "#007DFF",
+      marginLeft: 5,
     },
     table: {
       width: 800,

@@ -1,7 +1,13 @@
 import logo from "../img/logo.gif";
 import { makeStyles } from "@material-ui/core/styles";
 import { Icon } from "@material-ui/core";
-import { AccessAlarm, ThreeDRotation } from "@material-ui/icons";
+import {
+  EventAvailable,
+  HourglassFull,
+  HourglassEmpty,
+  Mail,
+  AssignmentInd,
+} from "@material-ui/icons";
 import { SvgIcon } from "@material-ui/core";
 import { useState } from "react";
 // import SvgIcon from '@material-ui/core/SvgIcon';
@@ -27,9 +33,18 @@ const MainMenu = ({ pageChange }) => {
     ul: {
       cursor: "pointer",
       "& li": {
+        "&:hover": {
+          color: "#1976D2",
+        },
+        color: "#666666",
         width: 280,
         height: 48,
         listStyle: "none",
+        "& span": {
+          // color: "#333333",
+          verticalAlign: "top",
+          paddingLeft: 20,
+        },
       },
     },
   });
@@ -48,36 +63,41 @@ const MainMenu = ({ pageChange }) => {
         <ul className={classes.ul}>
           <li>
             {" "}
-            <AccessAlarm />
-            연말정산 일정 설정
+            <EventAvailable />
+            <span>연말정산 일정 설정</span>
           </li>
           <li
             onClick={(e) => {
               pageChange(1);
             }}
           >
-            인사정보 일괄
+            <AssignmentInd />
+            <span>인사정보 일괄</span>
           </li>
           <li
             onClick={(e) => {
               pageChange(2);
             }}
           >
-            연말정산 준비 작업
+            {" "}
+            <HourglassEmpty />
+            <span>연말정산 준비 작업</span>
           </li>
           <li
             onClick={(e) => {
               pageChange(3);
             }}
           >
-            연말정산 처리 작업
+            <HourglassFull />
+            <span>연말정산 처리 작업</span>
           </li>
           <li
             onClick={(e) => {
               pageChange(4);
             }}
           >
-            연말정산 공지 메일
+            <Mail />
+            <span>연말정산 공지 메일</span>
           </li>
         </ul>
       </div>

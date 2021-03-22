@@ -16,7 +16,8 @@ import {
   KeyboardDatePicker,
 } from "@material-ui/pickers";
 import FormLabel from "@material-ui/core/FormLabel";
-const SheduleSetting = () => {
+
+const NoticeMail = () => {
   const useStyles = makeStyles({
     root: {
       width: 1550,
@@ -40,33 +41,34 @@ const SheduleSetting = () => {
       fontSize: 16,
     },
     rbox: {
-      width: 850,
+      width: 690,
       borderRadius: 10,
       //   overflowY: "scroll",
       overflowX: "hidden",
+      border: "1px solid black",
     },
     btn2: {
-      width: "auto",
+      width: 68,
       height: 30,
       backgroundColor: "#FFFFFF",
       border: "1px solid #007DFF",
       borderRadius: 5,
       color: "#007DFF",
-      marginLeft: 5,
+      marginLeft: 10,
     },
     table: {
-      width: 800,
+      width: 820,
       maxHeight: 600,
       overflowY: "scroll",
       padding: 10,
       backgroundColor: "#FFFFFF",
       display: "table",
-      border: "1px solid black",
+      // border: "1px solid black",
       //   paddingRight: 50,
     },
     tleft: {
       display: "table-cell",
-      border: "1px solid black",
+      // border: "1px solid black",
       width: 180,
       height: 70,
       paddingLeft: 20,
@@ -77,9 +79,19 @@ const SheduleSetting = () => {
       display: "table-cell",
       //   border: "1px solid black",
       verticalAlign: "middle",
-      width: 520,
+      width: 480,
       height: 70,
-      paddingLeft: 5,
+      paddingLeft: 15,
+      paddingRight: 30,
+      // background: "skyblue",
+    },
+    datebox: {
+      width: 560,
+      // height: 180,
+      marginTop: 10,
+      backgroundColor: "#F5F5F5",
+      paddingLeft: 15,
+      borderRadius: 10,
     },
   });
   const classes = useStyles();
@@ -91,13 +103,16 @@ const SheduleSetting = () => {
   const columns = [
     { field: "id", headerName: "회사명", width: 200 },
     { field: "firstName", headerName: "처리결과", width: 120 },
-    { field: "lastName", headerName: "실행날짜", width: 120 },
+    { field: "firstName", headerName: "처리상태", width: 120 },
+    { field: "lastName", headerName: "등록날짜", width: 120 },
+    { field: "lastName", headerName: "완료날짜", width: 120 },
     {
       field: "age",
       headerName: "처리자",
       type: "number",
       width: 120,
     },
+
     // {
     //   field: "fullName",
     //   headerName: "Full name",
@@ -122,20 +137,24 @@ const SheduleSetting = () => {
     { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
     { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
   ];
+
   return (
     <div>
       <div className={classes.root}>
         <div>
           <p>
-            <b>인사정보 일괄</b>{" "}
-            <button className={classes.btn2}>대상자 가져오기</button>
-            <button className={classes.btn2}>연말정산 정보갱신</button>
-            <button className={classes.btn2}>인사정보 동기화(가져오기)</button>
+            <b>연말정산 공지메일</b>{" "}
+            <button className={classes.btn2}>일괄발송</button>
           </p>
         </div>
         <div className={classes.box}>
           <div
-            style={{ height: "100%", width: "100%", backgroundColor: "white" }}
+            style={{
+              height: "100%",
+              width: 840,
+              backgroundColor: "white",
+              borderRadius: 10,
+            }}
           >
             <DataGrid
               rows={rows}
@@ -144,9 +163,49 @@ const SheduleSetting = () => {
               checkboxSelection
             />
           </div>
+          <div className={classes.rbox}>
+            <div className={classes.table}>
+              근로자의 로그인 경로를 선택해주세요
+              <div
+                style={{
+                  // border: "1px solid black",
+                  backgroundColor: "#F5F5F5",
+                  width: 560,
+                  height: 60,
+                  paddingTop: 15,
+                  borderRadius: 10,
+                  paddingLeft: 20,
+                }}
+              >
+                <FormControl component="fieldset">
+                  {/* <FormLabel component="legend">Gender</FormLabel> */}
+                  <RadioGroup
+                    aria-label="gender"
+                    name="gender1"
+                    value={value}
+                    onChange={handleChange}
+                    style={{ display: "inline" }}
+                  >
+                    <FormControlLabel
+                      value="female"
+                      control={<Radio color="primary" />}
+                      label="Htms"
+                    />
+                    <FormControlLabel
+                      value="male"
+                      control={<Radio color="primary" />}
+                      label="Tax-Refund"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </div>
+              종류를 선택해주세요
+              <div></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-export default SheduleSetting;
+export default NoticeMail;

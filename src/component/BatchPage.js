@@ -5,7 +5,9 @@ import Search from "./Search";
 import ScheduleSetting from "../component/ScheduleSetting";
 import InsaPer from "./InsaPer";
 import Ready from "./Ready";
+
 import { useState } from "react";
+import NoticeMail from "./NoticeMail";
 
 const BatchPage = () => {
   const useStyles = makeStyles({
@@ -13,9 +15,11 @@ const BatchPage = () => {
       //   position: "fixed",
       //   position: "relative",
       backgroundColor: "#E5E5E5",
+
       //   backgroundColor: "red",
       height: "100vh",
-      //   width: "100%",
+      // width: "100vw",
+      width: "100vw",
       //   paddingTop: 100,
       //   border: "1px solid black",
       //   display: "inline-block",
@@ -53,8 +57,11 @@ const BatchPage = () => {
           ) : menuNum === 2 ? (
             // alert("hi", menuNum)
             <Ready />
+          ) : menuNum === 3 ? (
+            <InsaPer />
+          ) : menuNum === 4 ? (
+            <NoticeMail />
           ) : (
-            // <InsaPer />
             <ScheduleSetting />
           )}
         </div>

@@ -16,14 +16,18 @@ import {
   KeyboardDatePicker,
 } from "@material-ui/pickers";
 import FormLabel from "@material-ui/core/FormLabel";
+
 const SheduleSetting = () => {
   const useStyles = makeStyles({
     root: {
-      width: 1550,
+      // width: 1550,
+      // width: "100%",
       height: 680,
-      border: "1px solid black",
-      marginLeft: 350,
+      border: "1px solid red",
+      paddingLeft: 350,
       marginTop: 30,
+      boxSizing: "border-box",
+      // backgroundColor: "blue",
     },
     schedulelist: {
       width: 673,
@@ -31,19 +35,51 @@ const SheduleSetting = () => {
       position: "relative",
     },
     box: {
-      display: "flex",
-      justifyContent: "space-between",
-      width: 1550,
-      //   borderRadius: 20,
-      //   backgroundColor: "red",
+      // display: "inline-block",
+      // float: "left",
+      // display: "flex",
+      // justifyContent: "space-between",
+
+      // width: 1500,
+      // width: "100%",
+
+      // borderRadius: 20,
+      // backgroundColor: "red",
+      // width: "100vw",
       height: 610,
       fontSize: 16,
+      width: "95%",
+      border: "2px solid black",
+      whiteSpace: "nowrap",
     },
-    rbox: {
-      width: 850,
+    lbox: {
+      whiteSpace: "nowrap",
+      height: "100%",
+      // width: 660,
+      minWidth: "600",
+      width: "42%",
+
+      backgroundColor: "white",
       borderRadius: 10,
-      //   overflowY: "scroll",
-      overflowX: "hidden",
+      display: "inline-block",
+      float: "left",
+    },
+
+    rbox: {
+      width: "55%",
+      display: "inline-block",
+      whiteSpace: "nowrap",
+      float: "right",
+      // position: "relative",
+      paddingRight: 20,
+      // width: 790,
+      height: 610,
+      borderRadius: 10,
+      overflowY: "scroll",
+      // overflowX: "hidden",
+      // backgroundColor: "blue",
+      marginLeft: 20,
+      boxSizing: "border-box",
     },
     btn2: {
       width: 68,
@@ -55,11 +91,13 @@ const SheduleSetting = () => {
       marginLeft: 10,
     },
     table: {
-      width: 820,
+      // width: 820,
+      width: "100%",
       maxHeight: 600,
-      overflowY: "scroll",
+      // overflowY: "scroll",
       padding: 10,
       backgroundColor: "#FFFFFF",
+      // height: "100%",
       display: "table",
       // border: "1px solid black",
       //   paddingRight: 50,
@@ -67,7 +105,7 @@ const SheduleSetting = () => {
     tleft: {
       display: "table-cell",
       // border: "1px solid black",
-      width: 180,
+      width: 140,
       height: 70,
       paddingLeft: 20,
       boxSizing: "border-box",
@@ -84,6 +122,7 @@ const SheduleSetting = () => {
       // background: "skyblue",
     },
     datebox: {
+      display: "block",
       width: 560,
       // height: 180,
       marginTop: 10,
@@ -99,14 +138,14 @@ const SheduleSetting = () => {
     setValue(event.target.value);
   };
   const columns = [
-    { field: "id", headerName: "회사명", width: 200 },
-    { field: "firstName", headerName: "처리결과", width: 120 },
+    { field: "id", headerName: "회사명", width: 140 },
+    { field: "firstName", headerName: "처리결과", width: 110 },
     { field: "lastName", headerName: "실행날짜", width: 120 },
     {
       field: "age",
       headerName: "처리자",
       type: "number",
-      width: 120,
+      width: 110,
     },
     // {
     //   field: "fullName",
@@ -122,15 +161,15 @@ const SheduleSetting = () => {
   ];
 
   const rows = [
-    { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
-    { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
-    { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
-    { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
-    { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
-    { id: 6, lastName: "Melisandre", firstName: "Daenerys", age: 150 },
-    { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
-    { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
-    { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
+    { id: "회사명1", lastName: "Snow", firstName: "Jon", age: 35 },
+    { id: "회사명2", lastName: "Lannister", firstName: "Cersei", age: 42 },
+    { id: "회사명3", lastName: "Lannister", firstName: "Jaime", age: 45 },
+    { id: "회사명4", lastName: "Stark", firstName: "Arya", age: 16 },
+    { id: "회사명5", lastName: "Targaryen", firstName: "Daenerys", age: null },
+    { id: "회사명6", lastName: "Melisandre", firstName: "Daenerys", age: 150 },
+    { id: "회사명7", lastName: "Clifford", firstName: "Ferrara", age: 44 },
+    { id: "회사명8", lastName: "Frances", firstName: "Rossini", age: 36 },
+    { id: "회사명9", lastName: "Roxie", firstName: "Harvey", age: 65 },
   ];
 
   return (
@@ -143,14 +182,7 @@ const SheduleSetting = () => {
           </p>
         </div>
         <div className={classes.box}>
-          <div
-            style={{
-              height: "100%",
-              width: 673,
-              backgroundColor: "white",
-              borderRadius: 10,
-            }}
-          >
+          <div className={classes.lbox}>
             <DataGrid
               rows={rows}
               columns={columns}
@@ -230,9 +262,7 @@ const SheduleSetting = () => {
                     variant="filled"
                     style={{
                       width: 400,
-
                       paddingRight: 12,
-
                       float: "right",
                     }}
                   />
@@ -256,7 +286,15 @@ const SheduleSetting = () => {
                         "aria-label": "change date",
                       }}
                     />
-                    <span>~</span>
+                    <span
+                      style={{
+                        fontSize: 20,
+                        lineHeight: 3,
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      ~
+                    </span>
 
                     <KeyboardDatePicker
                       disableToolbar
@@ -293,18 +331,15 @@ const SheduleSetting = () => {
                         "aria-label": "change date",
                       }}
                     />{" "}
-                    <div
+                    <span
                       style={{
-                        display: "inline",
+                        fontSize: 20,
+                        lineHeight: 3,
                         verticalAlign: "middle",
-                        mariginTop: 180,
-                        height: 60,
-
-                        border: "1px solid black",
                       }}
                     >
-                      <span style={{ verticalAlign: "middle" }}>~</span>
-                    </div>
+                      ~
+                    </span>
                     <KeyboardDatePicker
                       disableToolbar
                       variant="inline"
@@ -339,7 +374,15 @@ const SheduleSetting = () => {
                           "aria-label": "change date",
                         }}
                       />{" "}
-                      <span>~</span>
+                      <span
+                        style={{
+                          fontSize: 20,
+                          lineHeight: 3,
+                          verticalAlign: "middle",
+                        }}
+                      >
+                        ~
+                      </span>
                       <KeyboardDatePicker
                         disableToolbar
                         variant="inline"
@@ -354,6 +397,7 @@ const SheduleSetting = () => {
                         }}
                       />
                     </MuiPickersUtilsProvider>
+                    <br />
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                       <KeyboardDatePicker
                         disableToolbar
@@ -368,7 +412,15 @@ const SheduleSetting = () => {
                           "aria-label": "change date",
                         }}
                       />{" "}
-                      <span>~</span>
+                      <span
+                        style={{
+                          fontSize: 20,
+                          lineHeight: 3,
+                          verticalAlign: "middle",
+                        }}
+                      >
+                        ~
+                      </span>
                       <KeyboardDatePicker
                         disableToolbar
                         variant="inline"
@@ -383,6 +435,7 @@ const SheduleSetting = () => {
                         }}
                       />
                     </MuiPickersUtilsProvider>
+                    <br />
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                       <KeyboardDatePicker
                         disableToolbar
@@ -397,7 +450,15 @@ const SheduleSetting = () => {
                           "aria-label": "change date",
                         }}
                       />{" "}
-                      <span>~</span>
+                      <span
+                        style={{
+                          fontSize: 20,
+                          lineHeight: 3,
+                          verticalAlign: "middle",
+                        }}
+                      >
+                        ~
+                      </span>
                       <KeyboardDatePicker
                         disableToolbar
                         variant="inline"
@@ -433,7 +494,15 @@ const SheduleSetting = () => {
                           "aria-label": "change date",
                         }}
                       />{" "}
-                      <span>~</span>
+                      <span
+                        style={{
+                          fontSize: 20,
+                          lineHeight: 3,
+                          verticalAlign: "middle",
+                        }}
+                      >
+                        ~
+                      </span>
                       <KeyboardDatePicker
                         disableToolbar
                         variant="inline"
@@ -448,6 +517,7 @@ const SheduleSetting = () => {
                         }}
                       />
                     </MuiPickersUtilsProvider>
+                    <br />
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                       <KeyboardDatePicker
                         disableToolbar
@@ -462,7 +532,15 @@ const SheduleSetting = () => {
                           "aria-label": "change date",
                         }}
                       />{" "}
-                      <span>~</span>
+                      <span
+                        style={{
+                          fontSize: 20,
+                          lineHeight: 3,
+                          verticalAlign: "middle",
+                        }}
+                      >
+                        ~
+                      </span>
                       <KeyboardDatePicker
                         disableToolbar
                         variant="inline"
@@ -477,6 +555,7 @@ const SheduleSetting = () => {
                         }}
                       />
                     </MuiPickersUtilsProvider>
+                    <br />
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                       <KeyboardDatePicker
                         disableToolbar
@@ -491,7 +570,15 @@ const SheduleSetting = () => {
                           "aria-label": "change date",
                         }}
                       />{" "}
-                      <span>~</span>
+                      <span
+                        style={{
+                          fontSize: 20,
+                          lineHeight: 3,
+                          verticalAlign: "middle",
+                        }}
+                      >
+                        ~
+                      </span>
                       <KeyboardDatePicker
                         disableToolbar
                         variant="inline"
