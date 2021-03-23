@@ -31,6 +31,7 @@ const MainMenu = ({ pageChange }) => {
       // boxSizing: "border-box",
     },
     ul: {
+      paddingTop: 20,
       cursor: "pointer",
       "& li": {
         "&:hover": {
@@ -61,14 +62,18 @@ const MainMenu = ({ pageChange }) => {
     <>
       <div className={classes.leftmenu}>
         <ul className={classes.ul}>
-          <li>
+          <li
+            onClick={(e) => {
+              pageChange(1);
+            }}
+          >
             {" "}
             <EventAvailable />
             <span>연말정산 일정 설정</span>
           </li>
           <li
             onClick={(e) => {
-              pageChange(1);
+              pageChange(2);
             }}
           >
             <AssignmentInd />
@@ -76,7 +81,7 @@ const MainMenu = ({ pageChange }) => {
           </li>
           <li
             onClick={(e) => {
-              pageChange(2);
+              pageChange(3);
             }}
           >
             {" "}
@@ -85,7 +90,7 @@ const MainMenu = ({ pageChange }) => {
           </li>
           <li
             onClick={(e) => {
-              pageChange(3);
+              pageChange(4);
             }}
           >
             <HourglassFull />
@@ -93,7 +98,7 @@ const MainMenu = ({ pageChange }) => {
           </li>
           <li
             onClick={(e) => {
-              pageChange(4);
+              pageChange(5);
             }}
           >
             <Mail />

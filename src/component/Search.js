@@ -32,13 +32,20 @@ const TopMenu = () => {
       // justifyContent: "start",
     },
     menuc: {
-      minWidth: 1100,
-      width: 1200,
+      minWidth: 1000,
+      width: 1110,
       height: 100,
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
       paddingLeft: 20,
+    },
+    formControl: {
+      margin: "spacing(1)",
+      minWidth: 120,
+    },
+    selectEmpty: {
+      marginTop: "spacing(2)",
     },
   });
   const classes = useStyles();
@@ -53,8 +60,15 @@ const TopMenu = () => {
       <div className={classes.TopMenu}>
         <div className={classes.menuc}>
           <FormControl variant="outlined" className={classes.formControl}>
-            <InputLabel id="demo-simple-select-filled-label">귀속년</InputLabel>
+            <InputLabel
+              htmlFor="outlined-age-native-simple"
+              // id="demo-simple-select-filled-label"
+              style={{ fontSize: 14 }}
+            >
+              귀속년
+            </InputLabel>
             <Select
+              native
               style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
@@ -70,7 +84,10 @@ const TopMenu = () => {
             </Select>
           </FormControl>
           <FormControl variant="outlined" className={classes.formControl}>
-            <InputLabel id="demo-simple-select-filled-label">
+            <InputLabel
+              id="demo-simple-select-filled-label"
+              style={{ fontSize: 14 }}
+            >
               내외부구분
             </InputLabel>
             <Select
@@ -111,7 +128,10 @@ const TopMenu = () => {
             </Select>
           </FormControl>
           <FormControl variant="outlined" className={classes.formControl}>
-            <InputLabel id="demo-simple-select-filled-label">
+            <InputLabel
+              id="demo-simple-select-filled-label"
+              style={{ fontSize: 14 }}
+            >
               처리상태
             </InputLabel>
             <Select
@@ -129,12 +149,22 @@ const TopMenu = () => {
               <MenuItem value={30}>Thirty</MenuItem>
             </Select>
           </FormControl>
-          <TextField id="filled-basic" label="회사코드입력" variant="filled" />
-          <TextField id="filled-basic" label="처리자입력" variant="filled" />
+          <TextField
+            id="filled-basic"
+            label="회사코드입력"
+            variant="filled"
+            style={{ fontSize: 14 }}
+          />
+          <TextField
+            id="filled-basic"
+            label="처리자입력"
+            variant="filled"
+            style={{ fontSize: 14 }}
+          />
           <Button
             variant="contained"
             color="primary"
-            style={{ backgroundColor: "#007DFF" }}
+            style={{ backgroundColor: "#007DFF", height: 48 }}
           >
             검색하기
           </Button>

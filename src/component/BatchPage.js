@@ -32,7 +32,7 @@ const BatchPage = () => {
     right: {},
   });
   const classes = useStyles();
-  const [menuNum, setMenuNum] = useState();
+  const [menuNum, setMenuNum] = useState("1");
 
   const pageChange = (id) => {
     console.log("id", id);
@@ -45,21 +45,20 @@ const BatchPage = () => {
       <Header />
       <div className={classes.bg}>
         <div style={{ paddingTop: 100 }}>
-          <MainMenu
-            /*setMenuNum={setMenuNum} */ pageChange={pageChange}
-            // menuNum={111111}
-          />
-          {/* <MainMenu /> */}
+          <MainMenu pageChange={pageChange} />
+
           <Search />
 
           {menuNum === 1 ? (
-            <InsaPer />
+            <ScheduleSetting />
           ) : menuNum === 2 ? (
             // alert("hi", menuNum)
-            <Ready />
-          ) : menuNum === 3 ? (
             <InsaPer />
+          ) : menuNum === 3 ? (
+            <Ready />
           ) : menuNum === 4 ? (
+            <Ready />
+          ) : menuNum === 5 ? (
             <NoticeMail />
           ) : (
             <ScheduleSetting />

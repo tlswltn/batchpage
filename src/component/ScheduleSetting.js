@@ -23,12 +23,14 @@ const SheduleSetting = () => {
       // width: 1550,
       // width: "100%",
       height: 680,
-      border: "1px solid red",
+      // border: "1px solid red",
       paddingLeft: 350,
       marginTop: 30,
       boxSizing: "border-box",
       // backgroundColor: "blue",
     },
+
+
     schedulelist: {
       width: 673,
       height: 730,
@@ -49,7 +51,7 @@ const SheduleSetting = () => {
       height: 610,
       fontSize: 16,
       width: "95%",
-      border: "2px solid black",
+      // border: "2px solid black",
       whiteSpace: "nowrap",
     },
     lbox: {
@@ -66,7 +68,7 @@ const SheduleSetting = () => {
     },
 
     rbox: {
-      width: "55%",
+      width: "56%",
       display: "inline-block",
       whiteSpace: "nowrap",
       float: "right",
@@ -78,13 +80,13 @@ const SheduleSetting = () => {
       overflowY: "scroll",
       // overflowX: "hidden",
       // backgroundColor: "blue",
-      marginLeft: 20,
+      // marginLeft: 20,
       boxSizing: "border-box",
     },
     btn2: {
       width: 68,
       height: 30,
-      backgroundColor: "#FFFFFF",
+      // backgroundColor: "#FFFFFF",
       border: "1px solid #007DFF",
       borderRadius: 5,
       color: "#007DFF",
@@ -262,8 +264,10 @@ const SheduleSetting = () => {
                     variant="filled"
                     style={{
                       width: 400,
-                      paddingRight: 12,
+                      paddingRight: 15,
                       float: "right",
+                      // borderRadius: 15,
+                      // backgroundColor: "#FFFFFF",
                     }}
                   />
                 </div>
