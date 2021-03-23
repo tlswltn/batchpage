@@ -30,7 +30,6 @@ const SheduleSetting = () => {
       // backgroundColor: "blue",
     },
 
-
     schedulelist: {
       width: 673,
       height: 730,
@@ -196,7 +195,7 @@ const SheduleSetting = () => {
             <div className={classes.table}>
               <div style={{ display: "table-row" }}>
                 <div className={classes.tleft}>거래처구분</div>
-                <div className={classes.tright} style={{}}>
+                <div className={classes.tright}>
                   <div
                     style={{
                       // border: "1px solid black",

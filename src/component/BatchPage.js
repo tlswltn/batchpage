@@ -8,6 +8,7 @@ import Ready from "./Ready";
 
 import { useState } from "react";
 import NoticeMail from "./NoticeMail";
+import YAPropcess from "./YAPropcess";
 
 const BatchPage = () => {
   const useStyles = makeStyles({
@@ -57,7 +58,7 @@ const BatchPage = () => {
           ) : menuNum === 3 ? (
             <Ready />
           ) : menuNum === 4 ? (
-            <Ready />
+            <YAPropcess />
           ) : menuNum === 5 ? (
             <NoticeMail />
           ) : (

@@ -13,7 +13,7 @@ import TableSortLabel from "@material-ui/core/TableSortLabel";
 import Paper from "@material-ui/core/Paper";
 import Checkbox from "@material-ui/core/Checkbox";
 
-const SheduleSetting = () => {
+const YAPropcess = () => {
   const useStyles = makeStyles({
     root: {
       width: 1550,
@@ -234,7 +234,9 @@ const SheduleSetting = () => {
         <Paper>
           {/* <EnhancedTableToolbar numSelected={selected.length} /> */}
           <TableContainer>
-            <Table stickyHeader aria-label="sticky table"
+            <Table
+              stickyHeader
+              aria-label="sticky table"
               // className={classes.table}
               // aria-labelledby="tableTitle"
               // size={dense ? "small" : "medium"}
@@ -416,10 +418,12 @@ const SheduleSetting = () => {
       <div className={classes.root}>
         <div>
           <p>
-            <b>인사정보 일괄</b>{" "}
-            <button className={classes.btn2}>대상자 가져오기</button>
-            <button className={classes.btn2}>연말정산 정보갱신</button>
-            <button className={classes.btn2}>인사정보 동기화(가져오기)</button>
+            <b>연말정산 처리작업</b>{" "}
+            <button className={classes.btn2}>일괄 계산</button>
+            <button className={classes.btn2}>일괄 마감</button>
+            <button className={classes.btn2}>일괄 마감 취소</button>
+            <button className={classes.btn2}>보이기 마감</button>
+            <button className={classes.btn2}>보이기 마감 취소</button>
           </p>
         </div>
         <div className={classes.box}>
@@ -441,4 +445,4 @@ const SheduleSetting = () => {
     </div>
   );
 };
-export default SheduleSetting;
+export default YAPropcess;

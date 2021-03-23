@@ -11,22 +11,6 @@ import Select from "@material-ui/core/Select";
 import TextField from "@material-ui/core/TextField";
 import Checkbox from "@material-ui/core/Checkbox";
 
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TablePagination from "@material-ui/core/TablePagination";
-import TableRow from "@material-ui/core/TableRow";
-
-import DateFnsUtils from "@date-io/date-fns";
-import {
-  MuiPickersUtilsProvider,
-  KeyboardTimePicker,
-  KeyboardDatePicker,
-} from "@material-ui/pickers";
-import FormLabel from "@material-ui/core/FormLabel";
-
 const NoticeMail = () => {
   const useStyles = makeStyles({
     root: {
@@ -43,6 +27,7 @@ const NoticeMail = () => {
       width: 673,
       height: 730,
       position: "relative",
+      // backgroundColor: "blue",
     },
     box: {
       // display: "inline-block",
@@ -58,7 +43,7 @@ const NoticeMail = () => {
       // width: "100vw",
       height: 610,
       fontSize: 16,
-      width: "95%",
+      width: "100%",
       // border: "2px solid black",
       whiteSpace: "nowrap",
     },
@@ -67,7 +52,7 @@ const NoticeMail = () => {
       height: "100%",
       // width: 660,
       minWidth: "600",
-      width: "42%",
+      width: "48%",
 
       backgroundColor: "white",
       borderRadius: 10,
@@ -76,7 +61,7 @@ const NoticeMail = () => {
     },
 
     rbox: {
-      width: "56%",
+      width: "50%",
       display: "inline-block",
       whiteSpace: "nowrap",
       float: "right",
@@ -85,11 +70,12 @@ const NoticeMail = () => {
       // width: 790,
       height: 610,
       borderRadius: 10,
-      overflowY: "scroll",
+      // overflowY: "scroll",
       // overflowX: "hidden",
       // backgroundColor: "blue",
       // marginLeft: 20,
       boxSizing: "border-box",
+      fontSize: 15,
     },
     btn2: {
       width: 68,
@@ -157,6 +143,19 @@ const NoticeMail = () => {
       type: "number",
       width: 110,
     },
+    {
+      field: "age",
+      headerName: "처리자",
+      type: "number",
+      width: 110,
+    },
+    {
+      field: "age",
+      headerName: "처리자",
+      type: "number",
+      width: 110,
+    },
+
     // {
     //   field: "fullName",
     //   headerName: "Full name",
@@ -213,11 +212,14 @@ const NoticeMail = () => {
               style={{
                 backgroundColor: "white",
                 width: 600,
-                height: "100%",
+                // height: "100%",
+                height: 590,
                 padding: 15,
+                overflowY: "scroll",
+                overflowX: "hidden",
               }}
             >
-              근로자의 로그인 경로를 선택해주세요
+              <p>근로자의 로그인 경로를 선택해주세요</p>
               <div
                 style={{
                   // border: "1px solid black",
@@ -251,7 +253,7 @@ const NoticeMail = () => {
                   </RadioGroup>
                 </FormControl>
               </div>
-              종류를 선택해주세요
+              <p>종류를 선택해주세요</p>
               <div
                 style={{
                   // border: "1px solid black",
@@ -273,89 +275,97 @@ const NoticeMail = () => {
                     style={{ display: "inline" }}
                   >
                     <FormControlLabel
-                      value="female"
+                      // value="female"
                       control={<Radio color="primary" />}
                       label="연말정산 근로자 시작 유도메일"
                     />
                     <FormControlLabel
-                      value="male"
+                      // value="male"
                       control={<Radio color="primary" />}
                       label="연말정산 1차 마감 안내 메일"
                     />
                     <br />
                     <FormControlLabel
-                      value="female"
+                      // value="female"
                       control={<Radio color="primary" />}
                       label="연말정산 최종 마감 안내 메일"
                     />
                     <FormControlLabel
-                      value="male"
+                      // value="male"
                       control={<Radio color="primary" />}
                       label="온라인 미접수자 안내(SMS)"
                     />
                   </RadioGroup>
                 </FormControl>
               </div>
-              전달유형을 선택해주세요
-              <br />
-              <FormControl variant="outlined" className={classes.formControl}>
-                <InputLabel id="demo-simple-select-filled-label">
-                  전달유형
-                </InputLabel>
-                <Select
-                  style={{ width: 150, height: 50 }}
-                  labelId="demo-simple-select-filled-label"
-                  id="demo-simple-select-filled"
-                  // value={age}
-                  onChange={handleChange}
-                >
-                  {/* <MenuItem value="">
+              <p>전달유형을 선택해주세요</p>
+              <div style={{ display: "flex" }}>
+                <FormControl variant="outlined" className={classes.formControl}>
+                  <InputLabel id="demo-simple-select-filled-label">
+                    전달유형
+                  </InputLabel>
+                  <Select
+                    style={{ width: 130, height: 50, backgroundColor: "white" }}
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                    // value={age}
+                    onChange={handleChange}
+                  >
+                    {/* <MenuItem value="">
                     <em>메일+SMS</em>
                   </MenuItem> */}
-                  <MenuItem value={10}>메일+SMS</MenuItem>
-                  <MenuItem value={20}>메일</MenuItem>
-                  <MenuItem value={30}>SMS</MenuItem>
-                </Select>
-              </FormControl>
-              <div
-                style={{
-                  // border: "1px solid black",
-                  backgroundColor: "#F5F5F5",
-                  width: 560,
-                  height: 60,
-                  paddingTop: 15,
-                  borderRadius: 10,
-                  paddingLeft: 20,
-                  fontSize: 12,
-                }}
-              >
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      // checked={state.checkedB}
-                      // onChange={handleChange}
-                      name="checkedB"
-                      color="primary"
-                    />
-                  }
-                  style={{ fontSize: 12 }}
-                  label=" SMS 전송시 모바일 링크 포함"
-                />
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      // checked={state.checkedB}
-                      // onChange={handleChange}
-                      name="checkedB"
-                      color="primary"
-                    />
-                  }
-                  label=" 메일 전송시 이미지 없이 텍스트만 전송"
-                />
+                    <MenuItem value={10}>메일+SMS</MenuItem>
+                    <MenuItem value={20}>메일</MenuItem>
+                    <MenuItem value={30}>SMS</MenuItem>
+                  </Select>
+                </FormControl>
+
+                <div
+                  style={{
+                    // border: "1px solid black",
+                    backgroundColor: "#F5F5F5",
+                    width: 430,
+                    height: 40,
+                    paddingLeft: 15,
+                    // paddingTop: 15,
+                    borderRadius: 10,
+                    padding: 5,
+                    marginLeft: 10,
+                  }}
+                >
+                  <FormControlLabel
+                    control={
+                      <Checkbox name="checkedB" color="primary" size="small" />
+                    }
+                    label={
+                      <span style={{ fontSize: 11 }}>
+                        {" "}
+                        SMS 전송시 모바일 링크 포함
+                      </span>
+                    }
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        // checked={state.checkedB}
+                        // onChange={handleChange}
+                        name="checkedB"
+                        color="primary"
+                        size="small"
+                      />
+                    }
+                    label={
+                      <span style={{ fontSize: 11 }}>
+                        {" "}
+                        메일 전송시 이미지 없이 텍스트만 전송
+                      </span>
+                    }
+                  />
+                </div>
               </div>
               <br />
               <div style={{ width: 600, display: "flex" }}>
-                메일제목을 입력해주세요
+                메일 제목을 입력해주세요
                 <br />
                 (미작성 시 기본 제목 발송)
                 <TextField
@@ -363,43 +373,44 @@ const NoticeMail = () => {
                   label="메일 제목 입력"
                   multiline
                   rowsMax={4}
-                  value={value}
+                  // value={value}
                   onChange={handleChange}
                   variant="filled"
-                  style={{ width: 400 }}
+                  style={{ width: 400, paddingLeft: 6 }}
                 />
               </div>
-              <div style={{ width: 600, display: "flex" }}>
-                메일제목을 입력해주세요
+              <div style={{ paddingTop: 10, width: 600, display: "flex" }}>
+                메일 내용을 입력해주세요
                 <br />
                 (미작성 시 기본 제목 발송)
                 <TextField
                   id="filled-multiline-flexible"
-                  label="메일 제목 입력"
+                  label="메일 내용 입력"
                   multiline
                   rowsMax={4}
-                  value={value}
+                  // value={value}
                   onChange={handleChange}
                   variant="filled"
-                  style={{ width: 400 }}
+                  style={{ width: 400, paddingLeft: 6 }}
                 />
               </div>
-              <div style={{ width: 600, display: "flex" }}>
-                메일제목을 입력해주세요
+              <div style={{ paddingTop: 10, width: 600, display: "flex" }}>
+                SMS내용을 입력해주세요
                 <br />
                 (미작성 시 기본 제목 발송)
                 <TextField
                   id="filled-multiline-flexible"
-                  label="메일 제목 입력"
+                  label="SMS 내용 입력"
                   multiline
                   rowsMax={4}
-                  value={value}
+                  // value={value}
                   onChange={handleChange}
                   variant="filled"
-                  style={{ width: 400 }}
+                  style={{ width: 400, paddingLeft: 6 }}
                 />
               </div>
-              발신자 정보를 입력해주세요{" "}
+              <br />
+              <span>발신자 정보를 입력해주세요</span>
               <button
                 className={classes.btn2}
                 style={{ backgroundColor: "#FFFFFF" }}
@@ -407,17 +418,16 @@ const NoticeMail = () => {
                 {" "}
                 미리보기
               </button>
-              <div style={{ display: "flex" }}>
+
+              <div style={{ paddingTop: 10, display: "flex" }}>
                 <TextField
                   id="filled-basic"
                   label="성명 입력"
                   variant="filled"
                   style={{
-                    width: 110,
+                    width: 120,
                     paddingRight: 15,
                     float: "right",
-                    // borderRadius: 15,
-                    // backgroundColor: "#FFFFFF",
                   }}
                 />
                 <TextField
@@ -425,11 +435,9 @@ const NoticeMail = () => {
                   label="이메일 입력"
                   variant="filled"
                   style={{
-                    width: 110,
+                    width: 200,
                     paddingRight: 15,
                     float: "right",
-                    // borderRadius: 15,
-                    // backgroundColor: "#FFFFFF",
                   }}
                 />
                 <TextField
@@ -437,11 +445,9 @@ const NoticeMail = () => {
                   label="전화번호 입력"
                   variant="filled"
                   style={{
-                    width: 110,
+                    width: 180,
                     paddingRight: 15,
                     float: "right",
-                    // borderRadius: 15,
-                    // backgroundColor: "#FFFFFF",
                   }}
                 />
               </div>
