@@ -13,7 +13,7 @@ import TableSortLabel from "@material-ui/core/TableSortLabel";
 import Paper from "@material-ui/core/Paper";
 import Checkbox from "@material-ui/core/Checkbox";
 
-const SheduleSetting = () => {
+const InsaPer = () => {
   const useStyles = makeStyles({
     root: {
       // width: 1550,
@@ -41,12 +41,6 @@ const SheduleSetting = () => {
       fontSize: 16,
       // overflowX: "scroll",
     },
-    // rbox: {
-    //   width: 850,
-    //   borderRadius: 10,
-    //   //   overflowY: "scroll",
-    //   overflowX: "hidden",
-    // },
     btn2: {
       width: "auto",
       height: 30,
@@ -58,22 +52,15 @@ const SheduleSetting = () => {
     },
     table: {
       width: 1400,
-      // maxHeight: 600,
-      // overflowY: "auto",
-      // width: "100%",
-      // overflowX: "scroll",
-      padding: 10,
       backgroundColor: "#FFFFFF",
-      // display: "table",
       border: "1px solid black",
       borderRadius: 10,
-      //   paddingRight: 50,
     },
     tbox: {
       // width: "100%",
-      height: 630,
-      overflowX: "scroll",
-      // overflowY: "hidden",
+      height: 640,
+      // overflowX: "scroll",
+      overflowX: "hidden",
       padding: 0,
       textAlign: "center",
     },
@@ -172,7 +159,7 @@ const SheduleSetting = () => {
 
   // export default
   function EnhancedTable() {
-    const classes = useStyles();
+    // const classes = useStyles();
     const [order, setOrder] = React.useState("asc");
     const [orderBy, setOrderBy] = React.useState("calories");
     const [selected, setSelected] = React.useState([]);
@@ -234,16 +221,16 @@ const SheduleSetting = () => {
       rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
     return (
-      <div>
+      <>
         <Paper>
           {/* <EnhancedTableToolbar numSelected={selected.length} /> */}
-          <TableContainer style={{ backgroundColor: "#F5F5F5", height: 580 }}>
+          <TableContainer style={{ backgroundColor: "#FFFFFF", height: 580 }}>
             <Table
               stickyHeader
               aria-label="sticky table"
               style={{
                 width: 2000,
-                height: 580,
+                height: 560,
                 textAlign: "center",
                 // overflowX: "scroll",
               }}
@@ -253,8 +240,7 @@ const SheduleSetting = () => {
               // aria-label="enhanced table"
             >
               <TableHead
-              // stickyHeader
-              // aria-label="sticky table"
+
               // className={classes.thead}
               // style={{ position: "sticky" }}
               >
@@ -442,7 +428,7 @@ const SheduleSetting = () => {
           control={<Switch checked={dense} onChange={handleChangeDense} />}
           label="Dense padding"
         /> */}
-      </div>
+      </>
     );
   }
 
@@ -474,4 +460,4 @@ const SheduleSetting = () => {
     </div>
   );
 };
-export default SheduleSetting;
+export default InsaPer;
