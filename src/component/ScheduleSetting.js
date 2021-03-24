@@ -26,6 +26,7 @@ const SheduleSetting = () => {
       // border: "1px solid red",
       paddingLeft: 350,
       marginTop: 30,
+
       boxSizing: "border-box",
       // backgroundColor: "blue",
     },
@@ -138,6 +139,15 @@ const SheduleSetting = () => {
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+
+  const [selectedDate, setSelectedDate] = React.useState(
+    new Date("2014-08-18T21:11:54")
+  );
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
+
   const columns = [
     { field: "id", headerName: "회사명", width: 140 },
     { field: "firstName", headerName: "처리결과", width: 110 },
@@ -261,10 +271,10 @@ const SheduleSetting = () => {
 
                   <TextField
                     id="filled-basic"
-                    label="일정명 입력"
+                    label={<span style={{ paddingLeft: 10 }}>일정명 입력</span>}
                     variant="filled"
                     style={{
-                      width: 400,
+                      width: 420,
                       paddingLeft: 10,
                       // float: "right",
                       // borderRadius: 15,
@@ -285,8 +295,8 @@ const SheduleSetting = () => {
                       margin="normal"
                       id="date-picker-inline"
                       label="인사팀 안내자료 전달일"
-                      // value={selectedDate}
-                      // onChange={handleDateChange}
+                      value={selectedDate}
+                      onChange={handleDateChange}
                       KeyboardButtonProps={{
                         "aria-label": "change date",
                       }}
@@ -296,6 +306,7 @@ const SheduleSetting = () => {
                         fontSize: 20,
                         lineHeight: 3,
                         verticalAlign: "middle",
+                        padding: 15,
                       }}
                     >
                       ~
@@ -308,8 +319,8 @@ const SheduleSetting = () => {
                       margin="normal"
                       id="date-picker-inline"
                       label="임직원 안내자료 전달일"
-                      // value={selectedDate}
-                      // onChange={handleDateChange}
+                      value={selectedDate}
+                      onChange={handleDateChange}
                       KeyboardButtonProps={{
                         "aria-label": "change date",
                       }}
@@ -330,8 +341,8 @@ const SheduleSetting = () => {
                       margin="normal"
                       id="date-picker-inline"
                       label="작성상담 일정"
-                      // value={selectedDate}
-                      // onChange={handleDateChange}
+                      value={selectedDate}
+                      onChange={handleDateChange}
                       KeyboardButtonProps={{
                         "aria-label": "change date",
                       }}
@@ -341,6 +352,7 @@ const SheduleSetting = () => {
                         fontSize: 20,
                         lineHeight: 3,
                         verticalAlign: "middle",
+                        padding: 15,
                       }}
                     >
                       ~
@@ -352,8 +364,8 @@ const SheduleSetting = () => {
                       margin="normal"
                       id="date-picker-inline"
                       label="작성상담 일정"
-                      // value={selectedDate}
-                      // onChange={handleDateChange}
+                      value={selectedDate}
+                      onChange={handleDateChange}
                       KeyboardButtonProps={{
                         "aria-label": "change date",
                       }}
@@ -373,8 +385,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="1차 서류접수 수정일"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -384,6 +396,7 @@ const SheduleSetting = () => {
                           fontSize: 20,
                           lineHeight: 3,
                           verticalAlign: "middle",
+                          padding: 15,
                         }}
                       >
                         ~
@@ -395,8 +408,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="1차 서류접수 수정일"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -411,8 +424,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="1차 검토 일정"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -422,6 +435,7 @@ const SheduleSetting = () => {
                           fontSize: 20,
                           lineHeight: 3,
                           verticalAlign: "middle",
+                          padding: 15,
                         }}
                       >
                         ~
@@ -433,8 +447,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="1차 검토 일정"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -449,8 +463,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="1차 결과상담 일정"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -460,6 +474,7 @@ const SheduleSetting = () => {
                           fontSize: 20,
                           lineHeight: 3,
                           verticalAlign: "middle",
+                          padding: 15,
                         }}
                       >
                         ~
@@ -471,8 +486,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="1차 결과상담 일정"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -493,8 +508,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="2차 서류접수 수정일"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -504,6 +519,7 @@ const SheduleSetting = () => {
                           fontSize: 20,
                           lineHeight: 3,
                           verticalAlign: "middle",
+                          padding: 15,
                         }}
                       >
                         ~
@@ -515,8 +531,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="2차 서류접수 수정일"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -531,8 +547,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="2차 검토 일정"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -542,6 +558,7 @@ const SheduleSetting = () => {
                           fontSize: 20,
                           lineHeight: 3,
                           verticalAlign: "middle",
+                          padding: 15,
                         }}
                       >
                         ~
@@ -553,8 +570,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="2차 검토 일정"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -569,8 +586,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="2차 결과상담 일정"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}
@@ -580,6 +597,7 @@ const SheduleSetting = () => {
                           fontSize: 20,
                           lineHeight: 3,
                           verticalAlign: "middle",
+                          padding: 15,
                         }}
                       >
                         ~
@@ -591,8 +609,8 @@ const SheduleSetting = () => {
                         margin="normal"
                         id="date-picker-inline"
                         label="2차 결과상담 일정"
-                        // value={selectedDate}
-                        // onChange={handleDateChange}
+                        value={selectedDate}
+                        onChange={handleDateChange}
                         KeyboardButtonProps={{
                           "aria-label": "change date",
                         }}

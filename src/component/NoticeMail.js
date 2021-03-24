@@ -129,23 +129,29 @@ const NoticeMail = () => {
   });
   const classes = useStyles();
   const [value, setValue] = React.useState("");
+  const [type, setType] = React.useState("");
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+
+  const typeCheck = (event) => {
+    setType(event.target.value);
+  };
+
   const columns = [
     { field: "id", headerName: "회사명", width: 140 },
     { field: "firstName", headerName: "처리결과", width: 110 },
-    { field: "lastName", headerName: "실행날짜", width: 120 },
+    { field: "lastName", headerName: "처리상태", width: 120 },
     {
       field: "age",
-      headerName: "처리자",
+      headerName: "등록날짜",
       type: "number",
       width: 110,
     },
     {
       field: "age",
-      headerName: "처리자",
+      headerName: "완료날짜",
       type: "number",
       width: 110,
     },
@@ -270,53 +276,56 @@ const NoticeMail = () => {
                   <RadioGroup
                     aria-label="gender"
                     name="gender1"
-                    value={value}
-                    onChange={handleChange}
+                    value={type}
+                    // value="hi"
+                    onChange={typeCheck}
                     style={{ display: "inline" }}
                   >
                     <FormControlLabel
-                      // value="female"
+                      value="1"
                       control={<Radio color="primary" />}
                       label="연말정산 근로자 시작 유도메일"
+                      style={{ width: "55%" }}
                     />
                     <FormControlLabel
-                      // value="male"
+                      value="2"
                       control={<Radio color="primary" />}
                       label="연말정산 1차 마감 안내 메일"
+                      style={{ width: "45%" }}
                     />
                     <br />
                     <FormControlLabel
-                      // value="female"
+                      value="3"
                       control={<Radio color="primary" />}
                       label="연말정산 최종 마감 안내 메일"
+                      style={{ width: "55%" }}
                     />
                     <FormControlLabel
-                      // value="male"
+                      value="4"
                       control={<Radio color="primary" />}
                       label="온라인 미접수자 안내(SMS)"
+                      style={{ width: "45%" }}
                     />
                   </RadioGroup>
                 </FormControl>
               </div>
               <p>전달유형을 선택해주세요</p>
               <div style={{ display: "flex" }}>
-                <FormControl variant="outlined" className={classes.formControl}>
+                <FormControl variant="filled" className={classes.formControl}>
                   <InputLabel id="demo-simple-select-filled-label">
                     전달유형
                   </InputLabel>
                   <Select
+                    native
                     style={{ width: 130, height: 50, backgroundColor: "white" }}
                     labelId="demo-simple-select-filled-label"
                     id="demo-simple-select-filled"
                     // value={age}
                     onChange={handleChange}
                   >
-                    {/* <MenuItem value="">
-                    <em>메일+SMS</em>
-                  </MenuItem> */}
-                    <MenuItem value={10}>메일+SMS</MenuItem>
-                    <MenuItem value={20}>메일</MenuItem>
-                    <MenuItem value={30}>SMS</MenuItem>
+                    <option value={10}>메일+SMS</option>
+                    <option value={20}>메일</option>
+                    <option value={30}>SMS</option>
                   </Select>
                 </FormControl>
 

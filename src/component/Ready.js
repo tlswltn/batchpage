@@ -48,7 +48,7 @@ const Ready = () => {
     btn2: {
       width: "auto",
       height: 30,
-      backgroundColor: "#FFFFFF",
+      // backgroundColor: "#FFFFFF",
       border: "1px solid #007DFF",
       borderRadius: 5,
       color: "#007DFF",

@@ -16,11 +16,13 @@ import Checkbox from "@material-ui/core/Checkbox";
 const SheduleSetting = () => {
   const useStyles = makeStyles({
     root: {
-      width: 1550,
+      // width: 1550,
       height: 680,
-      border: "1px solid black",
+      // border: "1px solid red",
       marginLeft: 350,
       marginTop: 30,
+      // overflowX: "hidden",
+      boxSizing: "border-box",
     },
     schedulelist: {
       width: 673,
@@ -31,13 +33,13 @@ const SheduleSetting = () => {
       display: "flex",
       justifyContent: "space-between",
       // width: 1550,
-      width: "99%",
+      width: "98%",
       //   borderRadius: 20,
-      backgroundColor: "red",
+      // backgroundColor: "red",
       // height: 800,
       height: 600,
       fontSize: 16,
-      overflowX: "scroll",
+      // overflowX: "scroll",
     },
     rbox: {
       width: 850,
@@ -67,22 +69,12 @@ const SheduleSetting = () => {
       borderRadius: 10,
       //   paddingRight: 50,
     },
-    tleft: {
-      display: "table-cell",
-      border: "1px solid black",
-      width: 180,
-      height: 70,
-      paddingLeft: 20,
-      boxSizing: "border-box",
-      verticalAlign: "middle",
-    },
-    tright: {
-      display: "table-cell",
-      //   border: "1px solid black",
-      verticalAlign: "middle",
-      width: 520,
-      height: 70,
-      paddingLeft: 5,
+    tbox: {
+      // width: "100%",
+      height: "100%",
+      overflowX: "scroll",
+      padding: 0,
+      textAlign: "center",
     },
   });
   const classes = useStyles();
@@ -115,7 +107,16 @@ const SheduleSetting = () => {
     return { name, calories, fat, carbs, protein, name2 };
   }
   const rows = [
-    createData("Cupcake", 305, 3.7, 67, 4.3, "처리자1"),
+    createData(
+      "Cupcake",
+      305,
+      305,
+      "2021-01-01 11:31:52",
+
+      "2021-12-31 11:31:52",
+
+      "처리자1"
+    ),
     createData("Donut", 452, 25.0, 51, 4.9, "처리자1"),
     createData("Eclair", 262, 16.0, 24, 6.0, "처리자1"),
     createData("Frozen yoghurt", 159, 6.0, 24, 4.0, "처리자1"),
@@ -239,14 +240,22 @@ const SheduleSetting = () => {
             <Table
               stickyHeader
               aria-label="sticky table"
+              style={{ width: 2000, textAlign: "center" }}
               // className={classes.table}
               // aria-labelledby="tableTitle"
               // size={dense ? "small" : "medium"}
               // aria-label="enhanced table"
             >
-              <TableHead className={classes.thead}>
+              <TableHead
+              // className={classes.thead}
+              // style={{ position: "sticky" }}
+              >
                 <TableRow style={{ fontWeight: "bold" }}>
-                  <TableCell padding="checkbox" rowspan={2}>
+                  <TableCell
+                    padding="checkbox"
+                    rowspan={2}
+                    style={{ textAlign: "center" }}
+                  >
                     <Checkbox
                       // indeterminate={numSelected > 0 && numSelected < rowCount}
                       // checked={rowCount > 0 && numSelected === rowCount}
@@ -272,6 +281,7 @@ const SheduleSetting = () => {
                     style={{
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
+                      textAlign: "center",
                       width: 600,
                     }}
                   >
@@ -297,10 +307,18 @@ const SheduleSetting = () => {
                   </TableCell>
                   {/* ))} */}
                 </TableRow>
-                <TableRow>
-                  <TableCell style={{ fontWeight: "bold" }}>처리결과</TableCell>
+                <TableRow style={{ textAlign: "center" }}>
+                  <TableCell
+                    style={{ fontWeight: "bold", textAlign: "center" }}
+                  >
+                    처리결과
+                  </TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>처리상태</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>등록날짜</TableCell>
+                  <TableCell
+                    style={{ fontWeight: "bold", textAlign: "center" }}
+                  >
+                    등록날짜
+                  </TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>완료날짜</TableCell>
                   <TableCell
                     style={{
@@ -429,9 +447,7 @@ const SheduleSetting = () => {
           </p>
         </div>
         <div className={classes.box}>
-          <div
-            style={{ height: "100%", width: "100%", backgroundColor: "white" }}
-          >
+          <div className={classes.tbox}>
             <EnhancedTable />
 
             {/* <EnhancedTable /> */}

@@ -49,10 +49,18 @@ const TopMenu = () => {
     },
   });
   const classes = useStyles();
-  const [age, setAge] = React.useState("");
+  // const [age, setAge] = React.useState("");
+  const [yy, setYy] = React.useState("");
+  const [inout, setInout] = React.useState("");
+  const [pp, setPP] = React.useState("");
+  const [yastatus, setYastatus] = React.useState("");
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    // setAge(event.target.value);
+    setYy(event.target.value);
+    setInout(event.target.value);
+    setPP(event.target.value);
+    setYastatus(event.target.value);
   };
 
   return (
@@ -72,10 +80,10 @@ const TopMenu = () => {
               style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
-              value={age}
+              value={yy}
               onChange={handleChange}
             >
-              <option value={10}>Ten</option>
+              <option value={10}>2020</option>
               <option value={20}>Twenty</option>
               <option value={30}>Thirty</option>
             </Select>
@@ -92,12 +100,12 @@ const TopMenu = () => {
               style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
-              value={age}
+              value={inout}
               onChange={handleChange}
             >
-              <option value={10}>Ten</option>
-              <option value={20}>Twenty</option>
-              <option value={30}>Thirty</option>
+              <option value={10}>내부</option>
+              <option value={20}>외부</option>
+              {/* <option value={30}>Thirty</option> */}
             </Select>
           </FormControl>
           <FormControl variant="filled" className={classes.formControl}>
@@ -112,7 +120,7 @@ const TopMenu = () => {
               style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
-              value={age}
+              value={pp}
               onChange={handleChange}
             >
               <option value={10}>Ten</option>
@@ -132,7 +140,7 @@ const TopMenu = () => {
               style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
-              value={age}
+              value={yastatus}
               onChange={handleChange}
             >
               <option value={10}>Ten</option>
