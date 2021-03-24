@@ -12,23 +12,16 @@ import { SvgIcon } from "@material-ui/core";
 import { useState } from "react";
 // import SvgIcon from '@material-ui/core/SvgIcon';
 // import EventAvailableIcon from '@material-ui/icons/EventAvailable';
-const MainMenu = ({ pageChange }) => {
-  // const MainMenu = (props) => {
+const MainMenu = ({ pageChange, pagenum }) => {
   const useStyles = makeStyles({
     leftmenu: {
       position: "absolute",
-      // position: "absolute",
-
       // display: "inline-block",
       width: 300,
       height: 810,
-
       backgroundColor: "#FFFFFF",
       marginLeft: 30,
       borderRadius: 10,
-      // marginTop: 100,
-      // paddingTop: 100,
-      // boxSizing: "border-box",
     },
     ul: {
       paddingTop: 20,
@@ -56,8 +49,10 @@ const MainMenu = ({ pageChange }) => {
     // setOpen(true);
   }; */
   const classes = useStyles();
+  console.log("pagenum", pagenum);
   // console.log(menuNum);
   //const [menuNum, setMenuNum] = useState("0");
+  // const [number, setNumber] = useState("");
   return (
     <>
       <div className={classes.leftmenu}>
@@ -74,6 +69,7 @@ const MainMenu = ({ pageChange }) => {
           <li
             onClick={(e) => {
               pageChange(2);
+              // alert(pagenum);
             }}
           >
             <AssignmentInd />

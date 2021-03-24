@@ -37,16 +37,16 @@ const SheduleSetting = () => {
       //   borderRadius: 20,
       // backgroundColor: "red",
       // height: 800,
-      height: 600,
+      height: 630,
       fontSize: 16,
       // overflowX: "scroll",
     },
-    rbox: {
-      width: 850,
-      borderRadius: 10,
-      //   overflowY: "scroll",
-      overflowX: "hidden",
-    },
+    // rbox: {
+    //   width: 850,
+    //   borderRadius: 10,
+    //   //   overflowY: "scroll",
+    //   overflowX: "hidden",
+    // },
     btn2: {
       width: "auto",
       height: 30,
@@ -61,7 +61,7 @@ const SheduleSetting = () => {
       // maxHeight: 600,
       // overflowY: "auto",
       // width: "100%",
-      overflowX: "scroll",
+      // overflowX: "scroll",
       padding: 10,
       backgroundColor: "#FFFFFF",
       // display: "table",
@@ -71,8 +71,9 @@ const SheduleSetting = () => {
     },
     tbox: {
       // width: "100%",
-      height: "100%",
+      height: 630,
       overflowX: "scroll",
+      // overflowY: "hidden",
       padding: 0,
       textAlign: "center",
     },
@@ -236,17 +237,24 @@ const SheduleSetting = () => {
       <div>
         <Paper>
           {/* <EnhancedTableToolbar numSelected={selected.length} /> */}
-          <TableContainer>
+          <TableContainer style={{ backgroundColor: "#F5F5F5", height: 580 }}>
             <Table
               stickyHeader
               aria-label="sticky table"
-              style={{ width: 2000, textAlign: "center" }}
+              style={{
+                width: 2000,
+                height: 580,
+                textAlign: "center",
+                // overflowX: "scroll",
+              }}
               // className={classes.table}
               // aria-labelledby="tableTitle"
               // size={dense ? "small" : "medium"}
               // aria-label="enhanced table"
             >
               <TableHead
+              // stickyHeader
+              // aria-label="sticky table"
               // className={classes.thead}
               // style={{ position: "sticky" }}
               >
@@ -377,8 +385,11 @@ const SheduleSetting = () => {
                         <TableCell padding="checkbox">
                           <Checkbox
                             color="primary"
+                            size="small"
                             checked={isItemSelected}
-                            inputProps={{ "aria-labelledby": labelId }}
+                            inputProps={{
+                              "aria-labelledby": labelId,
+                            }}
                           />
                         </TableCell>
                         <TableCell

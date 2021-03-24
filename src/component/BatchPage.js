@@ -21,16 +21,7 @@ const BatchPage = () => {
       height: "100vh",
       // width: "100vw",
       width: "100vw",
-      //   paddingTop: 100,
-      //   border: "1px solid black",
-      //   display: "inline-block",
-      //   boxSizing: "border-box",
-      //   display: "flex",
-      //   flexDirection: "row",
-      //   justifyContent: "space-between",
     },
-    content: {},
-    right: {},
   });
   const classes = useStyles();
   const [menuNum, setMenuNum] = useState("1");
@@ -46,7 +37,7 @@ const BatchPage = () => {
       <Header />
       <div className={classes.bg}>
         <div style={{ paddingTop: 100 }}>
-          <MainMenu pageChange={pageChange} />
+          <MainMenu pageChange={pageChange} pagenum={menuNum} />
 
           <Search />
 
