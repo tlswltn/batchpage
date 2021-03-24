@@ -12,9 +12,9 @@ const TopMenu = () => {
   const useStyles = makeStyles({
     TopMenu: {
       // float:"right",
-      // width: "70%",
+      width: "78%",
       // minWidth: 1000,
-      width: 1500,
+      // width: 1500,
       // width: "100vw",
       // width: "80%",
       // float: "right",
@@ -59,7 +59,7 @@ const TopMenu = () => {
     <div>
       <div className={classes.TopMenu}>
         <div className={classes.menuc}>
-          <FormControl variant="outlined" className={classes.formControl}>
+          <FormControl variant="filled" className={classes.formControl}>
             <InputLabel
               htmlFor="outlined-age-native-simple"
               // id="demo-simple-select-filled-label"
@@ -75,15 +75,12 @@ const TopMenu = () => {
               value={age}
               onChange={handleChange}
             >
-              <MenuItem value="">
-                <em>2020</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <option value={10}>Ten</option>
+              <option value={20}>Twenty</option>
+              <option value={30}>Thirty</option>
             </Select>
           </FormControl>
-          <FormControl variant="outlined" className={classes.formControl}>
+          <FormControl variant="filled" className={classes.formControl}>
             <InputLabel
               id="demo-simple-select-filled-label"
               style={{ fontSize: 14 }}
@@ -91,21 +88,19 @@ const TopMenu = () => {
               내외부구분
             </InputLabel>
             <Select
+              native
               style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={age}
               onChange={handleChange}
             >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <option value={10}>Ten</option>
+              <option value={20}>Twenty</option>
+              <option value={30}>Thirty</option>
             </Select>
           </FormControl>
-          <FormControl variant="outlined" className={classes.formControl}>
+          <FormControl variant="filled" className={classes.formControl}>
             <InputLabel
               id="demo-simple-select-filled-label"
               style={{ fontSize: 14 }}
@@ -113,21 +108,19 @@ const TopMenu = () => {
               연말정산담당자
             </InputLabel>
             <Select
+              native
               style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={age}
               onChange={handleChange}
             >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <option value={10}>Ten</option>
+              <option value={20}>Twenty</option>
+              <option value={30}>Thirty</option>
             </Select>
           </FormControl>
-          <FormControl variant="outlined" className={classes.formControl}>
+          <FormControl variant="filled" className={classes.formControl}>
             <InputLabel
               id="demo-simple-select-filled-label"
               style={{ fontSize: 14 }}
@@ -135,18 +128,16 @@ const TopMenu = () => {
               처리상태
             </InputLabel>
             <Select
+              native
               style={{ width: 140 }}
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={age}
               onChange={handleChange}
             >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <option value={10}>Ten</option>
+              <option value={20}>Twenty</option>
+              <option value={30}>Thirty</option>
             </Select>
           </FormControl>
           <TextField

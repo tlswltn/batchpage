@@ -30,7 +30,8 @@ const SheduleSetting = () => {
     box: {
       display: "flex",
       justifyContent: "space-between",
-      width: 1550,
+      // width: 1550,
+      width: "99%",
       //   borderRadius: 20,
       backgroundColor: "red",
       // height: 800,
@@ -54,9 +55,10 @@ const SheduleSetting = () => {
       marginLeft: 5,
     },
     table: {
-      // width: 800,
+      width: 1400,
       // maxHeight: 600,
       // overflowY: "auto",
+      // width: "100%",
       overflowX: "scroll",
       padding: 10,
       backgroundColor: "#FFFFFF",
@@ -234,7 +236,9 @@ const SheduleSetting = () => {
         <Paper>
           {/* <EnhancedTableToolbar numSelected={selected.length} /> */}
           <TableContainer>
-            <Table stickyHeader aria-label="sticky table"
+            <Table
+              stickyHeader
+              aria-label="sticky table"
               // className={classes.table}
               // aria-labelledby="tableTitle"
               // size={dense ? "small" : "medium"}
@@ -268,6 +272,7 @@ const SheduleSetting = () => {
                     style={{
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
+                      width: 600,
                     }}
                   >
                     대상자 가져오기
@@ -278,6 +283,7 @@ const SheduleSetting = () => {
                     style={{
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
+                      width: 600,
                     }}
                   >
                     연말정산 정보갱신
@@ -285,7 +291,7 @@ const SheduleSetting = () => {
                   <TableCell
                     colspan={5}
                     align="center"
-                    style={{ fontWeight: "bold" }}
+                    style={{ fontWeight: "bold", width: 600 }}
                   >
                     인사정보 동기화
                   </TableCell>

@@ -49,7 +49,7 @@ const SheduleSetting = () => {
       // width: "100vw",
       height: 610,
       fontSize: 16,
-      width: "95%",
+      width: "98%",
       // border: "2px solid black",
       whiteSpace: "nowrap",
     },
@@ -58,7 +58,7 @@ const SheduleSetting = () => {
       height: "100%",
       // width: 660,
       minWidth: "600",
-      width: "42%",
+      width: "43%",
 
       backgroundColor: "white",
       borderRadius: 10,
@@ -171,6 +171,12 @@ const SheduleSetting = () => {
     { id: "회사명7", lastName: "Clifford", firstName: "Ferrara", age: 44 },
     { id: "회사명8", lastName: "Frances", firstName: "Rossini", age: 36 },
     { id: "회사명9", lastName: "Roxie", firstName: "Harvey", age: 65 },
+    { id: "회사명4", lastName: "Stark", firstName: "Arya", age: 16 },
+    { id: "회사명5", lastName: "Targaryen", firstName: "Daenerys", age: null },
+    { id: "회사명6", lastName: "Melisandre", firstName: "Daenerys", age: 150 },
+    { id: "회사명7", lastName: "Clifford", firstName: "Ferrara", age: 44 },
+    { id: "회사명8", lastName: "Frances", firstName: "Rossini", age: 36 },
+    { id: "회사명9", lastName: "Roxie", firstName: "Harvey", age: 65 },
   ];
 
   return (
@@ -187,7 +193,7 @@ const SheduleSetting = () => {
             <DataGrid
               rows={rows}
               columns={columns}
-              pageSize={5}
+              pageSize={20}
               checkboxSelection
             />
           </div>
@@ -234,26 +240,22 @@ const SheduleSetting = () => {
               <div style={{ display: "table-row" }}>
                 <div className={classes.tleft}>년도 및 일정명</div>
                 <div className={classes.tright}>
-                  <FormControl
-                    variant="outlined"
-                    className={classes.formControl}
-                  >
+                  <FormControl variant="filled" className={classes.formControl}>
                     <InputLabel id="demo-simple-select-filled-label">
                       년도
                     </InputLabel>
                     <Select
+                      native
                       style={{ width: 150, height: 50 }}
                       labelId="demo-simple-select-filled-label"
                       id="demo-simple-select-filled"
                       // value={age}
                       onChange={handleChange}
                     >
-                      <MenuItem value="">
-                        <em>None</em>
-                      </MenuItem>
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      <option aria-label="None" value="" />
+                      <option value={10}>Ten</option>
+                      <option value={20}>Twenty</option>
+                      <option value={30}>Thirty</option>
                     </Select>
                   </FormControl>
 
@@ -263,8 +265,8 @@ const SheduleSetting = () => {
                     variant="filled"
                     style={{
                       width: 400,
-                      paddingRight: 15,
-                      float: "right",
+                      paddingLeft: 10,
+                      // float: "right",
                       // borderRadius: 15,
                       // backgroundColor: "#FFFFFF",
                     }}
