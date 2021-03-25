@@ -374,7 +374,7 @@ const InsaPer = () => {
 
                 textAlign: "center",
 
-                // overflowX: "scroll",
+                // overflowX: "scroll"
               }}
               padding="none"
 
@@ -407,7 +407,7 @@ const InsaPer = () => {
                     rowspan={2}
                     style={{
                       borderRight: "1px solid lightgray",
-                      width: 120,
+                      width: 170,
                       height: 90,
                       fontWeight: "bold",
                     }}
@@ -453,7 +453,9 @@ const InsaPer = () => {
                   >
                     처리결과
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                  <TableCell
+                    style={{ fontWeight: "bold", textAlign: "center", top: 45 }}
+                  >
                     처리상태
                   </TableCell>
                   <TableCell
@@ -461,7 +463,9 @@ const InsaPer = () => {
                   >
                     등록날짜
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                  <TableCell
+                    style={{ fontWeight: "bold", textAlign: "center", top: 45 }}
+                  >
                     완료날짜
                   </TableCell>
                   <TableCell
@@ -469,6 +473,7 @@ const InsaPer = () => {
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
                       top: 45,
+                      textAlign: "center",
                     }}
                   >
                     처리자
