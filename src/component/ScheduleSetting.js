@@ -50,7 +50,7 @@ const SheduleSetting = () => {
       // width: "100vw",
       height: 610,
       fontSize: 16,
-      width: "98%",
+      width: "96%",
       // border: "2px solid black",
       whiteSpace: "nowrap",
     },
@@ -59,7 +59,7 @@ const SheduleSetting = () => {
       height: "100%",
       // width: 660,
       minWidth: "600",
-      width: "43%",
+      width: "44%",
 
       backgroundColor: "white",
       borderRadius: 10,
@@ -68,7 +68,7 @@ const SheduleSetting = () => {
     },
 
     rbox: {
-      width: "56%",
+      width: "54%",
       display: "inline-block",
       whiteSpace: "nowrap",
       float: "right",

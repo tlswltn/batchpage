@@ -1,6 +1,7 @@
 import logo from "../img/logo.gif";
 import { makeStyles } from "@material-ui/core/styles";
 import { Icon } from "@material-ui/core";
+import React from "react";
 import {
   EventAvailable,
   HourglassFull,

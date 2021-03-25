@@ -33,7 +33,7 @@ const InsaPer = () => {
       display: "flex",
       justifyContent: "space-between",
       // width: 1550,
-      width: "98%",
+      width: "95%",
       //   borderRadius: 20,
       // backgroundColor: "red",
       // height: 800,
@@ -57,7 +57,7 @@ const InsaPer = () => {
       borderRadius: 10,
     },
     tbox: {
-      // width: "100%",
+      width: "100%",
       height: 640,
       // overflowX: "scroll",
       overflowX: "hidden",
@@ -240,9 +240,9 @@ const InsaPer = () => {
               // aria-label="enhanced table"
             >
               <TableHead
-
-              // className={classes.thead}
-              // style={{ position: "sticky" }}
+                stickyHeader={true}
+                // className={classes.thead}
+                // style={{}}
               >
                 <TableRow style={{ fontWeight: "bold" }}>
                   <TableCell
@@ -277,6 +277,7 @@ const InsaPer = () => {
                       fontWeight: "bold",
                       textAlign: "center",
                       width: 600,
+                      top: 0,
                     }}
                   >
                     대상자 가져오기
@@ -303,42 +304,66 @@ const InsaPer = () => {
                 </TableRow>
                 <TableRow style={{ textAlign: "center" }}>
                   <TableCell
-                    style={{ fontWeight: "bold", textAlign: "center" }}
+                    style={{ fontWeight: "bold", textAlign: "center", top: 57 }}
                   >
                     처리결과
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리상태</TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    처리상태
+                  </TableCell>
                   <TableCell
-                    style={{ fontWeight: "bold", textAlign: "center" }}
+                    style={{ fontWeight: "bold", textAlign: "center", top: 57 }}
                   >
                     등록날짜
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>완료날짜</TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    완료날짜
+                  </TableCell>
                   <TableCell
                     style={{
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
+                      top: 57,
                     }}
                   >
                     처리자
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리결과</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리상태</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>등록날짜</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>완료날짜</TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    처리결과
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    처리상태
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    등록날짜
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    완료날짜
+                  </TableCell>
                   <TableCell
                     style={{
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
+                      top: 57,
                     }}
                   >
                     처리자
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리결과</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리상태</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>등록날짜</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>완료날짜</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리자</TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    처리결과
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    처리상태
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    등록날짜
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    완료날짜
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 57 }}>
+                    처리자
+                  </TableCell>
                 </TableRow>
               </TableHead>
 

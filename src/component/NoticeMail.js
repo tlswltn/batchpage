@@ -41,9 +41,9 @@ const NoticeMail = () => {
       // borderRadius: 20,
       // backgroundColor: "red",
       // width: "100vw",
-      height: 610,
+      height: 620,
       fontSize: 16,
-      width: "100%",
+      width: "95%",
       // border: "2px solid black",
       whiteSpace: "nowrap",
     },
@@ -52,7 +52,7 @@ const NoticeMail = () => {
       height: "100%",
       // width: 660,
       minWidth: "600",
-      width: "48%",
+      width: "53%",
 
       backgroundColor: "white",
       borderRadius: 10,
@@ -61,12 +61,12 @@ const NoticeMail = () => {
     },
 
     rbox: {
-      width: "50%",
+      width: "46%",
       display: "inline-block",
       whiteSpace: "nowrap",
       float: "right",
       // position: "relative",
-      paddingRight: 20,
+      // paddingRight: 20,
       // width: 790,
       height: 610,
       borderRadius: 10,
@@ -216,8 +216,10 @@ const NoticeMail = () => {
           <div className={classes.rbox}>
             <div
               style={{
+                borderRadius: 10,
                 backgroundColor: "white",
-                width: 600,
+                minWidth: 600,
+                width: "96%",
                 // height: "100%",
                 height: 590,
                 padding: 15,

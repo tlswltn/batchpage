@@ -1,3 +1,4 @@
+import Batch from "../css/Batch.css";
 import Header from "../component/Header";
 import MainMenu from "../component/MainMenu";
 import { makeStyles } from "@material-ui/core/styles";
@@ -5,6 +6,7 @@ import Search from "./Search";
 import ScheduleSetting from "../component/ScheduleSetting";
 import InsaPer from "./InsaPer";
 import Ready from "./Ready";
+import React from "react";
 
 import { useState } from "react";
 import NoticeMail from "./NoticeMail";
@@ -15,10 +17,11 @@ const BatchPage = () => {
     bg: {
       //   position: "fixed",
       //   position: "relative",
-      backgroundColor: "#E5E5E5",
+      // backgroundColor: "#E5E5E5",
 
       //   backgroundColor: "red",
-      height: "100vh",
+      // height: "100vh",
+      // height: "100%",
       // width: "100vw",
       width: "100vw",
     },

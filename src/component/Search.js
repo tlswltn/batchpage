@@ -81,11 +81,14 @@ const TopMenu = () => {
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={yy}
-              onChange={handleChange}
+              // onChange
+              onChange={(e) => {
+                setYy(e.target.value);
+              }}
             >
-              <option value={10}>2020</option>
-              <option value={20}>Twenty</option>
-              <option value={30}>Thirty</option>
+              <option value={2020}>2020</option>
+              <option value={2019}>2019</option>
+              <option value={2018}>2018</option>
             </Select>
           </FormControl>
           <FormControl variant="filled" className={classes.formControl}>
@@ -101,10 +104,13 @@ const TopMenu = () => {
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={inout}
-              onChange={handleChange}
+              onChange={(e) => {
+                setInout(e.target.value);
+              }}
             >
-              <option value={10}>내부</option>
-              <option value={20}>외부</option>
+              <option value={1}>전체</option>
+              <option value={2}>내부</option>
+              <option value={3}>외부</option>
               {/* <option value={30}>Thirty</option> */}
             </Select>
           </FormControl>
@@ -121,11 +127,14 @@ const TopMenu = () => {
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={pp}
-              onChange={handleChange}
+              onChange={(e) => {
+                setPP(e.target.value);
+              }}
             >
-              <option value={10}>Ten</option>
-              <option value={20}>Twenty</option>
-              <option value={30}>Thirty</option>
+              <option value={1}>전체</option>
+              <option value={2}>pp1</option>
+              <option value={3}>pp2</option>
+              <option value={4}>pp3</option>
             </Select>
           </FormControl>
           <FormControl variant="filled" className={classes.formControl}>
@@ -141,11 +150,13 @@ const TopMenu = () => {
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={yastatus}
-              onChange={handleChange}
+              onChange={(e) => {
+                setYastatus(e.target.value);
+              }}
             >
-              <option value={10}>Ten</option>
-              <option value={20}>Twenty</option>
-              <option value={30}>Thirty</option>
+              <option value={1}>전체</option>
+              <option value={2}>진행중</option>
+              <option value={3}>완료</option>
             </Select>
           </FormControl>
           <TextField
@@ -163,7 +174,7 @@ const TopMenu = () => {
           <Button
             variant="contained"
             color="primary"
-            style={{ backgroundColor: "#007DFF", height: 48 }}
+            style={{ backgroundColor: "#007DFF", height: 52 }}
           >
             검색하기
           </Button>

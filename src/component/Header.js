@@ -1,10 +1,13 @@
 import logo from "../img/logo.gif";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 const Header = () => {
   const useStyles = makeStyles({
     header: {
       position: "fixed",
+
       //   border: "1px solid black",
+
       height: 60,
       width: "100%",
       boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.15)",
