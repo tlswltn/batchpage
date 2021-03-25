@@ -5,7 +5,7 @@ const Header = () => {
   const useStyles = makeStyles({
     header: {
       position: "fixed",
-
+      zIndex: 99999,
       //   border: "1px solid black",
 
       height: 60,

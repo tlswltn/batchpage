@@ -192,7 +192,7 @@ const SheduleSetting = () => {
   return (
     <div>
       <div className={classes.root}>
-        <div>
+        <div style={{ width: 800 }}>
           <p>
             <b>연말정산 일정 설정</b>{" "}
             <button className={classes.btn2}>일괄설정</button>
@@ -256,7 +256,7 @@ const SheduleSetting = () => {
                     </InputLabel>
                     <Select
                       native
-                      style={{ width: 150, height: 50 }}
+                      style={{ width: 150, height: 56 }}
                       labelId="demo-simple-select-filled-label"
                       id="demo-simple-select-filled"
                       // value={age}

@@ -420,7 +420,7 @@ const Ready = () => {
   return (
     <div>
       <div className={classes.root}>
-        <div>
+      <div style={{ width: 800 }}>
           <p>
             <b>연말정산 준비작업</b>{" "}
             <button className={classes.btn2}>일괄 초기화</button>

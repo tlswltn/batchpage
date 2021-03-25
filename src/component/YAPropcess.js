@@ -435,7 +435,7 @@ const YAProcess = () => {
   return (
     <div>
       <div className={classes.root}>
-        <div>
+        <div style={{ width: 800 }}>
           <p>
             <b>연말정산 처리작업</b>{" "}
             <button className={classes.btn2}>일괄 계산</button>
