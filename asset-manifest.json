@@ -1,7 +1,7 @@
 {
   "main.css": "/batchpage/static/css/main.0225b53a.chunk.css",
-  "main.js": "/batchpage/static/js/main.0354a9a2.chunk.js",
-  "main.js.map": "/batchpage/static/js/main.0354a9a2.chunk.js.map",
+  "main.js": "/batchpage/static/js/main.7ae91148.chunk.js",
+  "main.js.map": "/batchpage/static/js/main.7ae91148.chunk.js.map",
   "runtime~main.js": "/batchpage/static/js/runtime~main.ce9d27be.js",
   "runtime~main.js.map": "/batchpage/static/js/runtime~main.ce9d27be.js.map",
   "static/js/2.cf3d82a4.chunk.js": "/batchpage/static/js/2.cf3d82a4.chunk.js",
@@ -9,7 +9,7 @@
   "static/js/3.6eab057b.chunk.js": "/batchpage/static/js/3.6eab057b.chunk.js",
   "static/js/3.6eab057b.chunk.js.map": "/batchpage/static/js/3.6eab057b.chunk.js.map",
   "index.html": "/batchpage/index.html",
-  "precache-manifest.024b976c0c0e0138bb90485d8aaa9d73.js": "/batchpage/precache-manifest.024b976c0c0e0138bb90485d8aaa9d73.js",
+  "precache-manifest.c1c67fc975c2775c3c639526b1245d34.js": "/batchpage/precache-manifest.c1c67fc975c2775c3c639526b1245d34.js",
   "service-worker.js": "/batchpage/service-worker.js",
   "static/css/main.0225b53a.chunk.css.map": "/batchpage/static/css/main.0225b53a.chunk.css.map"
 }
