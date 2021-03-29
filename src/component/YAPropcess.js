@@ -57,7 +57,7 @@ const YAProcess = () => {
       borderRadius: 10,
     },
     tbox: {
-      // width: "100%",
+      width: "100%",
       height: 640,
       // overflowX: "scroll",
       overflowX: "hidden",
@@ -96,40 +96,174 @@ const YAProcess = () => {
   }
   const rows = [
     createData(
-      "Cupcake",
-      305,
-      305,
-      "2021-01-01 11:31:52",
-
+      "(주)월급날1",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
       "2021-12-31 11:31:52",
-
       "처리자1"
     ),
-    createData("Donut", 452, 25.0, 51, 4.9, "처리자1"),
-    createData("Eclair", 262, 16.0, 24, 6.0, "처리자1"),
-    createData("Frozen yoghurt", 159, 6.0, 24, 4.0, "처리자1"),
-    createData("Gingerbread", 356, 16.0, 49, 3.9, "처리자1"),
-    createData("Honeycomb", 408, 3.2, 87, 6.5, "처리자1"),
-    createData("Ice cream sandwich", 237, 9.0, 37, 4.3, "처리자1"),
-    createData("Jelly Bean", 375, 0.0, 94, 0.0, "처리자1"),
-    createData("KitKat", 518, 26.0, 65, 7.0, "처리자1"),
-    createData("Lollipop", 392, 0.2, 98, 0.0, "처리자1"),
-    createData("Marshmallow", 318, 0, 81, 2.0, "처리자1"),
-    createData("Nougat", 360, 19.0, 9, 37.0, "처리자1"),
-    createData("Oreo", 437, 18.0, 63, 4.0, "처리자1"),
-    createData("Cupcake", 305, 3.7, 67, 4.3, "처리자1"),
-    createData("Donut", 452, 25.0, 51, 4.9, "처리자1"),
-    createData("Eclair", 262, 16.0, 24, 6.0, "처리자1"),
-    createData("Frozen yoghurt", 159, 6.0, 24, 4.0, "처리자1"),
-    createData("Gingerbread", 356, 16.0, 49, 3.9, "처리자1"),
-    createData("Honeycomb", 408, 3.2, 87, 6.5, "처리자1"),
-    createData("Ice cream sandwich", 237, 9.0, 37, 4.3, "처리자1"),
-    createData("Jelly Bean", 375, 0.0, 94, 0.0, "처리자1"),
-    createData("KitKat", 518, 26.0, 65, 7.0, "처리자1"),
-    createData("Lollipop", 392, 0.2, 98, 0.0, "처리자1"),
-    createData("Marshmallow", 318, 0, 81, 2.0, "처리자1"),
-    createData("Nougat", 360, 19.0, 9, 37.0, "처리자1"),
-    createData("Oreo", 437, 18.0, 63, 4.0, "처리자1"),
+    createData(
+      "(주)월급날2",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날3",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날4",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날5",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날6",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날7",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날8",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+
+    createData(
+      "(주)월급날9",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날10",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날11",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날12",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날13",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날14",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날15",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날16",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날17",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날18",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날19",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날20",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
+    createData(
+      "(주)월급날21",
+      "오류[0]건/전체[103]건",
+      "완료",
+      "21-01-01 11:31:52",
+      "2021-12-31 11:31:52",
+      "처리자1"
+    ),
   ];
   function descendingComparator(a, b, orderBy) {
     if (b[orderBy] < a[orderBy]) {
@@ -224,25 +358,35 @@ const YAProcess = () => {
       <>
         <Paper>
           {/* <EnhancedTableToolbar numSelected={selected.length} /> */}
-          <TableContainer style={{ backgroundColor: "#FFFFFF", height: 580 }}>
+          <TableContainer
+            style={{
+              backgroundColor: "#FFFFFF",
+              height: 580,
+              fontSize: 12,
+            }}
+          >
             <Table
               stickyHeader
               aria-label="sticky table"
               style={{
                 width: 2000,
                 height: 560,
+
                 textAlign: "center",
-                // overflowX: "scroll",
+
+                // overflowX: "scroll"
               }}
+              padding="none"
+
               // className={classes.table}
               // aria-labelledby="tableTitle"
               // size={dense ? "small" : "medium"}
               // aria-label="enhanced table"
             >
               <TableHead
-
-              // className={classes.thead}
-              // style={{ position: "sticky" }}
+                stickyHeader={true}
+                // className={classes.thead}
+                // style={{}}
               >
                 <TableRow style={{ fontWeight: "bold" }}>
                   <TableCell
@@ -263,7 +407,8 @@ const YAProcess = () => {
                     rowspan={2}
                     style={{
                       borderRight: "1px solid lightgray",
-                      width: 120,
+                      width: 170,
+                      height: 90,
                       fontWeight: "bold",
                     }}
                   >
@@ -277,9 +422,10 @@ const YAProcess = () => {
                       fontWeight: "bold",
                       textAlign: "center",
                       width: 600,
+                      top: 0,
                     }}
                   >
-                    대상자 가져오기
+                    일괄 계산
                   </TableCell>
                   <TableCell
                     colspan={5}
@@ -290,55 +436,84 @@ const YAProcess = () => {
                       width: 600,
                     }}
                   >
-                    연말정산 정보갱신
+                    일괄 마감
                   </TableCell>
                   <TableCell
                     colspan={5}
                     align="center"
                     style={{ fontWeight: "bold", width: 600 }}
                   >
-                    인사정보 동기화
+                    보이기 마감
                   </TableCell>
                   {/* ))} */}
                 </TableRow>
                 <TableRow style={{ textAlign: "center" }}>
                   <TableCell
-                    style={{ fontWeight: "bold", textAlign: "center" }}
+                    style={{ fontWeight: "bold", textAlign: "center", top: 45 }}
                   >
                     처리결과
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리상태</TableCell>
                   <TableCell
-                    style={{ fontWeight: "bold", textAlign: "center" }}
+                    style={{ fontWeight: "bold", textAlign: "center", top: 45 }}
+                  >
+                    처리상태
+                  </TableCell>
+                  <TableCell
+                    style={{ fontWeight: "bold", textAlign: "center", top: 45 }}
                   >
                     등록날짜
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>완료날짜</TableCell>
+                  <TableCell
+                    style={{ fontWeight: "bold", textAlign: "center", top: 45 }}
+                  >
+                    완료날짜
+                  </TableCell>
                   <TableCell
                     style={{
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
+                      top: 45,
+                      textAlign: "center",
                     }}
                   >
                     처리자
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리결과</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리상태</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>등록날짜</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>완료날짜</TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    처리결과
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    처리상태
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    등록날짜
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    완료날짜
+                  </TableCell>
                   <TableCell
                     style={{
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
+                      top: 45,
                     }}
                   >
                     처리자
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리결과</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리상태</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>등록날짜</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>완료날짜</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>처리자</TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    처리결과
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    처리상태
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    등록날짜
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    완료날짜
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    처리자
+                  </TableCell>
                 </TableRow>
               </TableHead>
 
@@ -367,6 +542,7 @@ const YAProcess = () => {
                         tabIndex={-1}
                         key={row.name}
                         selected={isItemSelected}
+                        style={{ fontSize: 12 }}
                       >
                         <TableCell padding="checkbox">
                           <Checkbox
@@ -386,23 +562,21 @@ const YAProcess = () => {
                         >
                           {row.name}
                         </TableCell>
-                        <TableCell align="right">{row.calories}</TableCell>
-                        <TableCell align="right">{row.fat}</TableCell>
-                        <TableCell align="right">{row.carbs}</TableCell>
-                        <TableCell align="right">{row.protein}</TableCell>
-                        <TableCell align="right">{row.name2}</TableCell>
-
-                        <TableCell align="right">{row.calories}</TableCell>
-                        <TableCell align="right">{row.fat}</TableCell>
-                        <TableCell align="right">{row.carbs}</TableCell>
-                        <TableCell align="right">{row.protein}</TableCell>
-                        <TableCell align="right">{row.name2}</TableCell>
-
-                        <TableCell align="right">{row.calories}</TableCell>
-                        <TableCell align="right">{row.fat}</TableCell>
-                        <TableCell align="right">{row.carbs}</TableCell>
-                        <TableCell align="right">{row.protein}</TableCell>
-                        <TableCell align="right">{row.name2}</TableCell>
+                        <TableCell align="center">{row.calories}</TableCell>
+                        <TableCell align="center">{row.fat}</TableCell>
+                        <TableCell align="center">{row.carbs}</TableCell>
+                        <TableCell align="center">{row.protein}</TableCell>
+                        <TableCell align="center">{row.name2}</TableCell>
+                        <TableCell align="center">{row.calories}</TableCell>
+                        <TableCell align="center">{row.fat}</TableCell>
+                        <TableCell align="center">{row.carbs}</TableCell>
+                        <TableCell align="center">{row.protein}</TableCell>
+                        <TableCell align="center">{row.name2}</TableCell>
+                        <TableCell align="center">{row.calories}</TableCell>
+                        <TableCell align="center">{row.fat}</TableCell>
+                        <TableCell align="center">{row.carbs}</TableCell>
+                        <TableCell align="center">{row.protein}</TableCell>
+                        <TableCell align="center">{row.name2}</TableCell>
                       </TableRow>
                     );
                   })}

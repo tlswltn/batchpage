@@ -132,6 +132,10 @@ const SheduleSetting = () => {
       paddingLeft: 15,
       borderRadius: 10,
     },
+    // ".MuiDataGrid-colCellWrapper": {
+    //   fontWeight: "bold",
+    //   color: "blue",
+    // },
   });
   const classes = useStyles();
   const [value, setValue] = React.useState("female");
@@ -202,6 +206,7 @@ const SheduleSetting = () => {
           <div className={classes.lbox}>
             <DataGrid
               rows={rows}
+              className={classes[".MuiDataGrid-colCellWrapper"]}
               columns={columns}
               pageSize={20}
               checkboxSelection

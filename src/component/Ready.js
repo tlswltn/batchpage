@@ -234,6 +234,7 @@ const Ready = () => {
                 textAlign: "center",
                 // overflowX: "scroll",
               }}
+              padding="none"
               // className={classes.table}
               // aria-labelledby="tableTitle"
               // size={dense ? "small" : "medium"}
@@ -265,6 +266,7 @@ const Ready = () => {
                       borderRight: "1px solid lightgray",
                       width: 200,
                       fontWeight: "bold",
+                      height: 90,
                     }}
                   >
                     회사명
@@ -277,6 +279,7 @@ const Ready = () => {
                       fontWeight: "bold",
                       textAlign: "center",
                       width: 600,
+                      // height: 45,
                     }}
                   >
                     일괄 초기화
@@ -297,35 +300,47 @@ const Ready = () => {
                 </TableRow>
                 <TableRow style={{ textAlign: "center" }}>
                   <TableCell
-                    style={{ fontWeight: "bold", textAlign: "center",top:57 }}
+                    style={{ fontWeight: "bold", textAlign: "center", top: 45 }}
                   >
                     처리결과
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold",top:57 }}>처리상태</TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    처리상태
+                  </TableCell>
                   <TableCell
-                    style={{ fontWeight: "bold", textAlign: "center",top:57 }}
+                    style={{ fontWeight: "bold", textAlign: "center", top: 45 }}
                   >
                     등록날짜
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold",top:57 }}>완료날짜</TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    완료날짜
+                  </TableCell>
                   <TableCell
                     style={{
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
-                      top:57
+                      top: 45,
                     }}
                   >
                     처리자
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold",top:57 }}>처리결과</TableCell>
-                  <TableCell style={{ fontWeight: "bold",top:57 }}>처리상태</TableCell>
-                  <TableCell style={{ fontWeight: "bold",top:57 }}>등록날짜</TableCell>
-                  <TableCell style={{ fontWeight: "bold",top:57 }}>완료날짜</TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    처리결과
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    처리상태
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    등록날짜
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold", top: 45 }}>
+                    완료날짜
+                  </TableCell>
                   <TableCell
                     style={{
                       borderRight: "1px solid lightgray",
                       fontWeight: "bold",
-                      top:57
+                      top: 45,
                     }}
                   >
                     처리자
@@ -420,7 +435,7 @@ const Ready = () => {
   return (
     <div>
       <div className={classes.root}>
-      <div style={{ width: 800 }}>
+        <div style={{ width: 800 }}>
           <p>
             <b>연말정산 준비작업</b>{" "}
             <button className={classes.btn2}>일괄 초기화</button>
